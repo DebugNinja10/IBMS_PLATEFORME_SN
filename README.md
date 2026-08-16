@@ -1,4 +1,4 @@
-# IBMS — Institut de Management et des Business Solutions
+# IBMS — Infomatic business and menagement skills
 
 > **Innovation · Formation · Technologie · Transformation Digitale**
 
