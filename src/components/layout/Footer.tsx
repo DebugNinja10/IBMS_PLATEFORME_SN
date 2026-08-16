@@ -118,15 +118,19 @@ export function Footer() {
             <ul className="space-y-3">
               <li className="flex items-center gap-2 text-sm text-white/70">
                 <Phone className="h-4 w-4 text-ibms-cyan shrink-0" strokeWidth={2} />
-                +221 XX XXX XX XX
+                +221 77 396 27 07
               </li>
               <li className="flex items-center gap-2 text-sm text-white/70">
                 <Mail className="h-4 w-4 text-ibms-cyan shrink-0" strokeWidth={2} />
-                contact@ibms.sn
+                startupibms@gmail.com
               </li>
               <li className="flex items-start gap-2 text-sm text-white/70">
                 <MapPin className="h-4 w-4 text-ibms-cyan shrink-0 mt-0.5" strokeWidth={2} />
-                Dakar, Sénégal
+                <span>
+                  Thiès, Angle Serigne Fallou
+                  <br />
+                  Dakar, Sacrée Coeur
+                </span>
               </li>
             </ul>
 
@@ -155,7 +159,7 @@ export function Footer() {
           <div className="flex items-center gap-4 flex-wrap">
             <span className="label text-white/40">IBMS — 2026</span>
             <span className="hidden md:inline h-px w-8 bg-white/20" />
-            <span className="label text-white/40">Dakar, Sénégal</span>
+            <span className="label text-white/40">Thiès / Dakar</span>
           </div>
           <div className="flex items-center gap-4">
             <Link to="/mentions-legales" className="label text-white/40 hover:text-ibms-cyan transition-colors duration-300">Mentions légales</Link>

@@ -32,8 +32,8 @@ export function Contact() {
                   </div>
                   <div>
                     <div className="label text-ibms-slate mb-1">Téléphone</div>
-                    <a href="tel:+221" className="text-base font-semibold text-ibms-ink hover:text-ibms-blue transition-colors duration-300">
-                      +221 XX XXX XX XX
+                    <a href="tel:+221773962707" className="text-base font-semibold text-ibms-ink hover:text-ibms-blue transition-colors duration-300">
+                      +221 77 396 27 07
                     </a>
                   </div>
                 </div>
@@ -43,8 +43,8 @@ export function Contact() {
                   </div>
                   <div>
                     <div className="label text-ibms-slate mb-1">Email</div>
-                    <a href="mailto:contact@ibms.sn" className="text-base font-semibold text-ibms-ink hover:text-ibms-blue transition-colors duration-300">
-                      contact@ibms.sn
+                    <a href="mailto:startupibms@gmail.com" className="text-base font-semibold text-ibms-ink hover:text-ibms-blue transition-colors duration-300">
+                      startupibms@gmail.com
                     </a>
                   </div>
                 </div>
@@ -54,7 +54,10 @@ export function Contact() {
                   </div>
                   <div>
                     <div className="label text-ibms-slate mb-1">Adresse</div>
-                    <p className="text-base font-semibold text-ibms-ink">Dakar, Sénégal</p>
+                    <div className="space-y-1 text-base font-semibold text-ibms-ink">
+                      <p>Thiès, Angle Serigne Fallou</p>
+                      <p>Dakar, Sacrée Coeur</p>
+                    </div>
                   </div>
                 </div>
                 <div className="flex items-center gap-4">

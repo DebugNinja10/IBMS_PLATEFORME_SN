@@ -14,8 +14,8 @@ export function PartenairesPage() {
         <div className="relative">
           <div className="flex gap-4 animate-marquee whitespace-nowrap will-change-transform hover:[animation-play-state:paused]">
             {marquee.map((partner, idx) => (
-              <div key={`${partner}-${idx}`} className="flex aspect-[3/2] min-w-[260px] items-center justify-center rounded-2xl border border-ibms-veil bg-ibms-cream px-8 transition-colors duration-300 hover:border-ibms-blue/30">
-                <span className="text-center text-lg font-extrabold text-ibms-slate">{partner}</span>
+              <div key={`${partner.name}-${idx}`} className="flex aspect-[3/2] min-w-[260px] items-center justify-center rounded-2xl border border-ibms-veil bg-ibms-cream px-8 transition-colors duration-300 hover:border-ibms-blue/30">
+                <img src={partner.image} alt={partner.name} className="max-h-16 w-auto max-w-[80%] object-contain" />
               </div>
             ))}
           </div>

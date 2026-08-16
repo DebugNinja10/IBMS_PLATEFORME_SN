@@ -21,15 +21,15 @@ export function ContactPage() {
                 <div className="space-y-5">
                   <div className="flex items-center gap-4">
                     <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-ibms-veil bg-white"><Phone className="h-5 w-5 text-ibms-blue" /></div>
-                    <div><div className="label mb-1 text-ibms-slate">Téléphone</div><a href="tel:+221" className="text-base font-semibold text-ibms-ink transition-colors hover:text-ibms-blue">+221 XX XXX XX XX</a></div>
+                    <div><div className="label mb-1 text-ibms-slate">Téléphone</div><a href="tel:+221773962707" className="text-base font-semibold text-ibms-ink transition-colors hover:text-ibms-blue">+221 77 396 27 07</a></div>
                   </div>
                   <div className="flex items-center gap-4">
                     <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-ibms-veil bg-white"><Mail className="h-5 w-5 text-ibms-blue" /></div>
-                    <div><div className="label mb-1 text-ibms-slate">Email</div><a href="mailto:contact@ibms.sn" className="text-base font-semibold text-ibms-ink transition-colors hover:text-ibms-blue">contact@ibms.sn</a></div>
+                    <div><div className="label mb-1 text-ibms-slate">Email</div><a href="mailto:startupibms@gmail.com" className="text-base font-semibold text-ibms-ink transition-colors hover:text-ibms-blue">startupibms@gmail.com</a></div>
                   </div>
                   <div className="flex items-center gap-4">
                     <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-ibms-veil bg-white"><MapPin className="h-5 w-5 text-ibms-blue" /></div>
-                    <div><div className="label mb-1 text-ibms-slate">Adresse</div><p className="text-base font-semibold text-ibms-ink">Dakar, Sénégal</p></div>
+                    <div><div className="label mb-1 text-ibms-slate">Adresse</div><div className="space-y-1 text-base font-semibold text-ibms-ink"><p>Thiès, Angle Serigne Fallou</p><p>Dakar, Sacrée Coeur</p></div></div>
                   </div>
                   <div className="flex items-center gap-4">
                     <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-ibms-veil bg-white"><Clock className="h-5 w-5 text-ibms-blue" /></div>

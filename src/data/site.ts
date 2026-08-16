@@ -425,13 +425,20 @@ export const articles: Article[] = [
   ] },
 ];
 
-export const partners: string[] = [
-  'Ministère du Numérique',
-  'Université de Dakar',
-  'Orange Digital Center',
-  'CTIC Dakar',
-  'Jokkolabs',
-  'Sonatel Academy',
+export type Partner = {
+  name: string;
+  image: string;
+};
+
+export const partners: Partner[] = [
+  { name: 'Paradigm Initiative', image: '/assets/images/Paradigm-initiative.png' },
+  { name: 'ANPEJ', image: '/assets/images/anpej.png' },
+  { name: 'Belgium', image: '/assets/images/belgium.png' },
+  { name: 'CMC', image: '/assets/images/cmc.png' },
+  { name: 'Eclosioo', image: '/assets/images/eclosioo.png' },
+  { name: 'Plan', image: '/assets/images/plan.png' },
+  { name: 'Thiès', image: '/assets/images/thies.png' },
+  { name: 'YMCA', image: '/assets/images/ymca.jpeg' },
 ];
 
 export type Mission = {
@@ -493,7 +500,7 @@ export type LegalSection = {
 };
 
 export const legalMentions: LegalSection[] = [
-  { title: 'Éditeur du site', content: "Le site ibms.sn est édité par IBMS — Institut de Formation et d'Innovation, dont le siège social est situé à Dakar, Sénégal. Contact : contact@ibms.sn / +221 XX XXX XX XX." },
+  { title: 'Éditeur du site', content: "Le site ibms.sn est édité par IBMS — Institut de Formation et d'Innovation. Nos lieux d’accueil sont situés à Thiès, Angle Serigne Fallou et à Dakar, Sacrée Coeur. Contact : startupibms@gmail.com / +221 77 396 27 07." },
   { title: 'Directeur de la publication', content: "La directrice de la publication est Madame Awa Diallo, Directrice générale d'IBMS." },
   { title: 'Hébergement', content: "Le site est hébergé par Bolt.host. Les données sont stockées dans des centres de données sécurisés conformes aux normes en vigueur." },
   { title: 'Propriété intellectuelle', content: "L'ensemble des contenus présents sur ce site (textes, images, logos, vidéos) est la propriété d'IBMS sauf mention contraire. Toute reproduction, représentation ou diffusion, totale ou partielle, est interdite sans autorisation écrite préalable." },
@@ -506,7 +513,7 @@ export const legalPrivacy: LegalSection[] = [
   { title: 'Collecte des données', content: "IBMS collecte les données suivantes : nom, prénom, adresse email, numéro de téléphone, parcours professionnel (uniquement lors de l'inscription à une formation). Ces données sont collectées via les formulaires du site." },
   { title: 'Utilisation des données', content: "Vos données sont utilisées pour : répondre à vos demandes d'information, gérer votre inscription aux formations, assurer le suivi pédagogique, vous informer des événements et actualités d'IBMS (si vous y avez consenti)." },
   { title: 'Conservation', content: "Vos données sont conservées pendant la durée de votre formation, puis archivées pour une durée de 3 ans à des fins statistiques, après quoi elles sont définitivement supprimées." },
-  { title: 'Vos droits', content: "Conformément à la réglementation en vigueur, vous disposez d'un droit d'accès, de rectification, d'effacement, de limitation et de portabilité de vos données. Pour exercer ces droits, contactez-nous à : contact@ibms.sn." },
+  { title: 'Vos droits', content: "Conformément à la réglementation en vigueur, vous disposez d'un droit d'accès, de rectification, d'effacement, de limitation et de portabilité de vos données. Pour exercer ces droits, contactez-nous à : startupibms@gmail.com." },
   { title: 'Sécurité', content: "IBMS met en œuvre des mesures techniques et organisationnelles appropriées pour protéger vos données contre l'accès non autorisé, la perte ou la divulgation." },
   { title: 'Partage', content: "IBMS ne vend, ne loue et ne partage jamais vos données personnelles avec des tiers à des fins commerciales. Vos données peuvent être partagées avec nos partenaires de formation uniquement avec votre consentement explicite." },
 ];

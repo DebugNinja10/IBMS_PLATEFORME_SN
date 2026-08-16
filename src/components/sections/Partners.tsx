@@ -18,16 +18,14 @@ export function Partners() {
           </div>
         </Reveal>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-          {partners.map((p, idx) => (
-            <Reveal key={p} delay={idx * 60}>
-              <div className="aspect-square bg-ibms-cream border border-ibms-veil rounded-2xl flex items-center justify-center transition-all duration-500 ease-ibms hover:border-ibms-blue/30 hover:shadow-lg hover:shadow-ibms-blue/5 group">
-                <span className="text-sm font-bold text-ibms-slate transition-colors duration-300 group-hover:text-ibms-blue">
-                  {p}
-                </span>
+        <div className="relative">
+          <div className="flex gap-6 animate-marquee whitespace-nowrap will-change-transform hover:[animation-play-state:paused]">
+            {[...partners, ...partners].map((partner, idx) => (
+              <div key={`${partner.name}-${idx}`} className="flex aspect-[3/2] min-w-[180px] items-center justify-center rounded-2xl border border-ibms-veil bg-ibms-cream px-6 py-4 transition-colors duration-300 hover:border-ibms-blue/30">
+                <img src={partner.image} alt={partner.name} className="max-h-14 w-auto max-w-[90%] object-contain" />
               </div>
-            </Reveal>
-          ))}
+            ))}
+          </div>
         </div>
         <Reveal delay={200}>
           <div className="mt-10 text-center">

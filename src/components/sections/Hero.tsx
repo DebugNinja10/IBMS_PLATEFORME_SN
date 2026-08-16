@@ -76,7 +76,7 @@ export function Hero() {
                   <div className="absolute inset-0 bg-gradient-to-t from-ibms-navy/45 to-transparent" />
                 </div>
                 <div className="absolute left-0 top-0 z-20 flex h-28 w-28 items-center justify-center rounded-full border border-ibms-ink/10 bg-white shadow-xl md:h-36 md:w-36">
-                  <img src="/assets/logo/pp-removebg-preview.png" alt="Logo IBMS" className="w-24 object-contain md:w-32" />
+                  <img src="/assets/images/logos/pp-removebg-preview.png" alt="Logo IBMS" className="w-24 object-contain md:w-32" />
                 </div>
                 <div className="absolute bottom-4 left-2 z-20 w-44 border border-white/50 bg-ibms-navy p-4 text-white shadow-xl md:left-0">
                   <div className="mb-3 flex items-center justify-between">
