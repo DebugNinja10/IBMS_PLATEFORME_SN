@@ -11,7 +11,7 @@ export function Logo({ className = '', variant = 'dark' }: LogoProps) {
       <img
         src="/assets/images/logos/pp-removebg-preview.png"
         alt="IBMS — Informatic Business and Management Skills"
-        className="h-auto w-[132px] object-contain"
+        className="h-auto w-[90px] sm:w-[110px] md:w-[132px] object-contain"
       />
     </span>
   );

@@ -18,11 +18,11 @@ export function Partners() {
           </div>
         </Reveal>
 
-        <div className="relative">
+        <div className="relative overflow-hidden">
           <div className="flex gap-6 animate-marquee whitespace-nowrap will-change-transform hover:[animation-play-state:paused]">
             {[...partners, ...partners].map((partner, idx) => (
-              <div key={`${partner.name}-${idx}`} className="flex aspect-[3/2] min-w-[180px] items-center justify-center rounded-2xl border border-ibms-veil bg-ibms-cream px-6 py-4 transition-colors duration-300 hover:border-ibms-blue/30">
-                <img src={partner.image} alt={partner.name} className="max-h-14 w-auto max-w-[90%] object-contain" />
+              <div key={`${partner.name}-${idx}`} className="flex aspect-[3/2] min-w-[120px] md:min-w-[180px] lg:min-w-[260px] items-center justify-center rounded-2xl border border-ibms-veil bg-ibms-cream px-4 md:px-6 py-4 transition-colors duration-300 hover:border-ibms-blue/30">
+                <img src={partner.image} alt={partner.name} className="max-h-12 md:max-h-14 w-auto max-w-[90%] object-contain" />
               </div>
             ))}
           </div>
