@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: #FFFFFF;
+    color: #0F172A;
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background-color: #0A4D9C;
+    color: #FFFFFF;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@layer components {
+  .label {
+    @apply text-xs uppercase tracking-widest font-semibold;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center gap-2 bg-ibms-blue px-6 py-3.5 text-sm font-semibold text-white rounded-xl transition-all duration-300 ease-ibms hover:bg-ibms-blueLight hover:shadow-lg hover:shadow-ibms-blue/25 hover:-translate-y-0.5;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center gap-2 bg-white border border-ibms-veil px-6 py-3.5 text-sm font-semibold text-ibms-ink rounded-xl transition-all duration-300 ease-ibms hover:border-ibms-blue hover:text-ibms-blue hover:-translate-y-0.5;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center gap-2 text-sm font-semibold text-ibms-blue transition-all duration-300 ease-ibms hover:gap-3;
+  }
+
+  .card {
+    @apply bg-white border border-ibms-veil rounded-2xl p-6 md:p-8 transition-all duration-500 ease-ibms hover:border-ibms-blue/30 hover:shadow-xl hover:shadow-ibms-blue/5;
+  }
+
+  .section-pad {
+    @apply py-20 md:py-28;
+  }
+
+  .container-ibms {
+    @apply mx-auto max-w-ibms px-5 md:px-8;
+  }
+}
+
+@layer utilities {
+  .reveal-hidden {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  .reveal-visible {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1), transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .line-draw {
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .line-draw-drawn {
+    transform: scaleX(1);
+  }
+
+  .text-gradient {
+    background: linear-gradient(135deg, #0A4D9C 0%, #06B6D4 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .bg-gradient-ibms {
+    background: linear-gradient(135deg, #0A4D9C 0%, #06B6D4 100%);
+  }
+
+  .bg-gradient-navy {
+    background: linear-gradient(180deg, #0A1F44 0%, #061226 100%);
+  }
+
+  .nav-link {
+    @apply relative text-sm font-semibold text-ibms-ink/80 transition-colors duration-300 hover:text-ibms-blue;
+  }
+
+  .nav-link::after {
+    content: '';
+    @apply absolute -bottom-1 left-0 h-0.5 w-0 bg-ibms-blue rounded-full transition-all duration-300 ease-ibms;
+  }
+
+  .nav-link:hover::after {
+    @apply w-full;
+  }
+
+  .dropdown-panel {
+    @apply absolute top-full left-0 right-0 pt-3;
+  }
+
+  .dropdown-content {
+    @apply bg-white border border-ibms-veil rounded-2xl shadow-xl shadow-ibms-ink/5 p-6;
+  }
+}
