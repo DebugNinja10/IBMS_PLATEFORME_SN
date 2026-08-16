@@ -1,4 +1,4 @@
-# IBMS — Infomatic business and menagement skills
+# IBMS — Informatic business and management skills
 
 > **Innovation · Formation · Technologie · Transformation Digitale**
 
