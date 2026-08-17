@@ -116,6 +116,10 @@ export const formations: Formation[] = [
   { num: '04', title: 'UI / UX Design', desc: 'Concevoir des expériences numériques significatives et centrées sur l\'utilisateur.', level: 'Débutant à avancé', duration: '4 mois', format: 'Présentiel', image: images.formation4, category: 'Design' },
   { num: '05', title: 'Marketing Digital', desc: 'Stratégie, contenu et performance en ligne pour développer la présence digitale.', level: 'Débutant', duration: '3 mois', format: 'En ligne', image: images.formation5, category: 'Marketing' },
   { num: '06', title: 'Gestion de Projet', desc: 'Piloter des projets technologiques de A à Z avec les méthodes agiles modernes.', level: 'Intermédiaire', duration: '4 mois', format: 'Hybride', image: images.formation6, category: 'Management' },
+  { num: '07', title: 'Création de contenus avec l\'IA', desc: 'Apprendre à produire et optimiser des contenus assistés par l\'IA pour le web et les réseaux sociaux.', level: 'Débutant à intermédiaire', duration: '2 mois', format: 'En ligne', image: images.formation2, category: 'Marketing' },
+  { num: '08', title: 'Bureautique', desc: 'Maîtriser les outils bureautiques essentiels pour être efficace en entreprise.', level: 'Débutant à intermédiaire', duration: '1 mois', format: 'En ligne', image: images.formation4, category: 'Productivité' },
+  { num: '09', title: 'Community Management', desc: 'Gérer et animer une communauté en ligne, créer des calendriers éditoriaux et analyser la performance.', level: 'Débutant', duration: '1.5 mois', format: 'En ligne', image: images.formation5, category: 'Marketing' },
+  { num: '10', title: 'Excel avancé', desc: 'Fonctions avancées, tableaux croisés dynamiques, macros et bonnes pratiques pour l\'analyse de données.', level: 'Intermédiaire à avancé', duration: '1.5 mois', format: 'Hybride', image: images.formation3, category: 'Bureautique' },
 ];
 
 export type FormationDetail = {

@@ -121,9 +121,9 @@ export function Header() {
                 href="https://form.jotform.com/261413065241042"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-xl border border-ibms-blue/20 bg-ibms-light px-4 py-2.5 text-sm font-semibold text-ibms-blue transition-all duration-300 hover:border-ibms-blue hover:bg-ibms-blue hover:text-white"
+                className="inline-flex items-center gap-2 rounded-xl bg-[#ff6a00] px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition-transform duration-200 hover:scale-105"
               >
-                Commander un module
+                Choisir une formation
               </a>
               <Link to="/contact" className="btn-primary">
                 Nous contacter
@@ -154,6 +154,18 @@ export function Header() {
           <button onClick={() => setMobileOpen(false)} aria-label="Fermer le menu">
             <X className="h-6 w-6 text-ibms-ink" strokeWidth={2} />
           </button>
+        </div>
+
+        <div className="px-5 pt-4">
+          <a
+            href="https://form.jotform.com/261413065241042"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full inline-flex items-center justify-center rounded-xl bg-[#ff6a00] px-4 py-3 text-sm font-semibold text-white shadow-sm transition-transform duration-200 hover:scale-105"
+            onClick={() => setMobileOpen(false)}
+          >
+            Choisir une formation
+          </a>
         </div>
 
         <nav className="px-5 py-6 overflow-y-auto h-[calc(100vh-65px)]" aria-label="Navigation mobile">
@@ -196,15 +208,7 @@ export function Header() {
             <Search className="h-5 w-5" />
             <span className="text-base font-semibold">Rechercher</span>
           </Link>
-          <a
-            href="https://form.jotform.com/261413065241042"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-4 flex w-full items-center justify-center rounded-xl border border-ibms-blue/20 bg-ibms-light px-4 py-3 text-sm font-semibold text-ibms-blue transition-all duration-300 hover:border-ibms-blue hover:bg-ibms-blue hover:text-white"
-            onClick={() => setMobileOpen(false)}
-          >
-            Commander un module
-          </a>
+          
           <Link to="/contact" className="btn-primary mt-4 w-full justify-center" onClick={() => setMobileOpen(false)}>
             Nous contacter
           </Link>
