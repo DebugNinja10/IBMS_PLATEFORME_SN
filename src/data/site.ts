@@ -63,7 +63,7 @@ export const navItems: NavItem[] = [
     ],
   },
   {
-    label: 'Services',
+    label: 'Services & Consultance',
     href: '/services',
     children: [
       { label: 'Formation professionnelle', num: '01', desc: 'Programmes structurés et certifiants.', path: '/services/01' },

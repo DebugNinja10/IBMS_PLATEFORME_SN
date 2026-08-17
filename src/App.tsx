@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { MessageCircle } from 'lucide-react';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { Hero } from '@/components/sections/Hero';
@@ -96,6 +97,15 @@ function App() {
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </main>
+      <a
+        href="https://wa.me/221762901364?text=Bonjour%20IBMS%2C%20je%20souhaite%20plus%20d%27informations."
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Contacter IBMS sur WhatsApp"
+        className="fixed bottom-5 right-5 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg shadow-[#25D366]/40 transition-transform duration-300 hover:scale-105"
+      >
+        <MessageCircle className="h-7 w-7" strokeWidth={2.2} />
+      </a>
       <Footer />
     </BrowserRouter>
   );

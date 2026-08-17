@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { Logo } from '@/components/ui/Logo';
-import { ArrowUpRight, Phone, Mail, MapPin, ArrowRight } from 'lucide-react';
+import { ArrowUpRight, Phone, Mail, MapPin, ArrowRight, Facebook, Instagram, Music2 } from 'lucide-react';
 import { useState } from 'react';
 
 const footerNav = [
@@ -10,7 +10,7 @@ const footerNav = [
       { label: 'Accueil', path: '/' },
       { label: 'À propos', path: '/a-propos' },
       { label: 'Formations', path: '/formations' },
-      { label: 'Services', path: '/services' },
+      { label: 'Services & Consultance', path: '/services' },
       { label: 'Projets', path: '/projets' },
       { label: 'Blog', path: '/blog' },
       { label: 'Équipe', path: '/equipe' },
@@ -118,7 +118,7 @@ export function Footer() {
             <ul className="space-y-3">
               <li className="flex items-center gap-2 text-sm text-white/70">
                 <Phone className="h-4 w-4 text-ibms-cyan shrink-0" strokeWidth={2} />
-                +221 77 396 27 07
+                +221 76 290 13 64
               </li>
               <li className="flex items-center gap-2 text-sm text-white/70">
                 <Mail className="h-4 w-4 text-ibms-cyan shrink-0" strokeWidth={2} />
@@ -138,17 +138,26 @@ export function Footer() {
             <div className="mt-6">
               <div className="label text-white/40 mb-3">Suivez-nous</div>
               <div className="flex items-center gap-3">
-                {['LinkedIn', 'Twitter', 'Instagram'].map((s) => (
-                  <a
-                    key={s}
-                    href={`https://${s.toLowerCase()}.com/ibms`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-9 h-9 bg-white/5 border border-white/10 rounded-lg flex items-center justify-center text-xs font-semibold text-white/60 transition-all duration-300 hover:bg-ibms-blue hover:text-white hover:border-ibms-blue"
-                  >
-                    {s.charAt(0)}
-                  </a>
-                ))}
+                {[
+                  { label: 'Facebook', href: 'https://www.facebook.com/ibmsofficiel?mibextid=wwXIfr&mibextid=wwXIfr', icon: Facebook },
+                  { label: 'TikTok', href: 'https://www.tiktok.com/@ibmsafrica773962707?_r=1&_t=ZS-98wTVOU7C45', icon: Music2 },
+                  { label: 'Instagram', href: 'https://www.instagram.com/ibms_officiel?igsh=OTBzNjNqYTBuMDVq&igsi=OTBzNjNqYTBuMDVq&utm_source=qr', icon: Instagram },
+                ].map((social) => {
+                  const Icon = social.icon;
+
+                  return (
+                    <a
+                      key={social.label}
+                      href={social.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={social.label}
+                      className="flex h-9 w-9 items-center justify-center rounded-lg border border-white/10 bg-white/5 text-white/70 transition-all duration-300 hover:border-ibms-blue hover:bg-ibms-blue hover:text-white"
+                    >
+                      <Icon className="h-4 w-4" strokeWidth={2.2} />
+                    </a>
+                  );
+                })}
               </div>
             </div>
           </div>
