@@ -57,7 +57,7 @@ export function Header() {
             </Link>
 
             {/* Desktop nav */}
-            <nav className="hidden lg:flex items-center gap-1" aria-label="Navigation principale">
+            <nav className="hidden lg:flex items-center gap-0" aria-label="Navigation principale">
               {navItems.map((item: NavItem) => (
                 <div
                   key={item.label}
@@ -66,7 +66,7 @@ export function Header() {
                 >
                   <Link
                     to={item.href}
-                    className={`nav-link flex items-center gap-1 px-3 py-2 rounded-lg transition-all duration-300 ${
+                    className={`nav-link flex items-center gap-1 px-2 py-2 rounded-lg transition-all duration-300 ${
                       openMenu === item.label ? 'text-ibms-blue bg-ibms-light/50' : ''
                     }`}
                   >

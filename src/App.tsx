@@ -98,7 +98,7 @@ function App() {
         </Routes>
       </main>
       <a
-        href="https://wa.me/221762901364?text=Bonjour%20IBMS%2C%20je%20souhaite%20plus%20d%27informations."
+        href="https://wa.me/221773962707?text=Bonjour%20IBMS%2C%20je%20souhaite%20plus%20d%27informations."
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Contacter IBMS sur WhatsApp"

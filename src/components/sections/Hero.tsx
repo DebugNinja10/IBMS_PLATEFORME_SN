@@ -21,15 +21,15 @@ export function Hero() {
                 <span className="h-2 w-2 rounded-full bg-ibms-cyan" />
                 <span className="label text-ibms-cyan">Formation / Innovation / Solutions numériques</span>
                 <span className="hidden h-px w-16 bg-ibms-veil sm:block" />
-                <span className="hidden text-[10px] font-bold uppercase tracking-widest text-ibms-slate sm:block">Dakar / SN</span>
+                <span className="hidden text-[10px] font-bold uppercase tracking-widest text-ibms-slate sm:block">Thies / SN</span>
               </div>
             </Reveal>
 
             <Reveal delay={100}>
               <h1 className="max-w-4xl text-hero font-serif font-normal tracking-normal text-white">
-                Transformez vos compétences{' '}
+                Maitrisez le numérique{' '}
                 <span className="relative inline-block text-ibms-cyan">
-                  en opportunités.
+                  avec IBMS.
                   <span className="absolute -bottom-2 left-0 h-1 w-2/3 bg-ibms-cyan" />
                 </span>
               </h1>
