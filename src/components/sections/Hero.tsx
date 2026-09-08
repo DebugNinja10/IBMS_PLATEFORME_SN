@@ -1,15 +1,14 @@
 import { ArrowRight, ArrowUpRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Reveal } from '@/components/ui/Reveal';
-import { images } from '@/data/site';
 
 export function Hero() {
   return (
-    <section id="accueil" className="relative overflow-hidden bg-ibms-light/40 pt-28 pb-16 md:pt-36 md:pb-24">
+    <section id="accueil" className="relative overflow-hidden bg-gradient-navy pt-28 pb-16 md:pt-36 md:pb-24">
       <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
-        <div className="absolute -right-32 top-24 h-[34rem] w-[34rem] rounded-full border border-ibms-blue/10" />
-        <div className="absolute -right-12 top-40 h-[25rem] w-[25rem] rounded-full border border-ibms-cyan/20" />
-        <div className="absolute right-28 top-56 h-3 w-3 rounded-full bg-ibms-cyan" />
+        <div className="absolute -right-32 top-24 hidden h-[34rem] w-[34rem] rounded-full border border-ibms-blue/10 md:block" />
+        <div className="absolute -right-12 top-40 hidden h-[25rem] w-[25rem] rounded-full border border-ibms-cyan/20 md:block" />
+        <div className="absolute right-28 top-56 hidden h-3 w-3 rounded-full bg-ibms-cyan md:block" />
         <div className="absolute left-0 top-24 h-px w-1/3 bg-ibms-blue/20" />
         <div className="absolute bottom-16 right-0 h-px w-1/4 bg-ibms-cyan/30" />
       </div>
@@ -20,16 +19,16 @@ export function Hero() {
             <Reveal>
               <div className="mb-7 flex items-center gap-3">
                 <span className="h-2 w-2 rounded-full bg-ibms-cyan" />
-                <span className="label text-ibms-blue">Formation / Innovation / Solutions numériques</span>
+                <span className="label text-ibms-cyan">Formation / Innovation / Solutions numériques</span>
                 <span className="hidden h-px w-16 bg-ibms-veil sm:block" />
                 <span className="hidden text-[10px] font-bold uppercase tracking-widest text-ibms-slate sm:block">Dakar / SN</span>
               </div>
             </Reveal>
 
             <Reveal delay={100}>
-              <h1 className="max-w-4xl text-hero font-extrabold text-ibms-ink">
+              <h1 className="max-w-4xl text-hero font-serif font-normal tracking-normal text-white">
                 Transformez vos compétences{' '}
-                <span className="relative inline-block text-ibms-blue">
+                <span className="relative inline-block text-ibms-cyan">
                   en opportunités.
                   <span className="absolute -bottom-2 left-0 h-1 w-2/3 bg-ibms-cyan" />
                 </span>
@@ -37,7 +36,7 @@ export function Hero() {
             </Reveal>
 
             <Reveal delay={200}>
-              <p className="mt-7 max-w-xl text-lg leading-relaxed text-ibms-slateDark">
+              <p className="mt-7 max-w-xl text-lg leading-relaxed text-white/70">
                 IBMS accompagne les jeunes, les professionnels, les entrepreneurs et les organisations
                 dans leur transformation numérique à travers la formation, l'innovation et la conception
                 de solutions digitales adaptées aux besoins réels.
@@ -50,7 +49,7 @@ export function Hero() {
                   Découvrir nos formations
                   <ArrowRight className="h-4 w-4" strokeWidth={2} />
                 </Link>
-                <Link to="/a-propos" className="btn-ghost">
+                <Link to="/a-propos" className="btn-ghost text-white">
                   Découvrir IBMS
                   <ArrowUpRight className="h-4 w-4" strokeWidth={2} />
                 </Link>
@@ -58,10 +57,10 @@ export function Hero() {
             </Reveal>
 
             <Reveal delay={400}>
-              <div className="mt-14 flex items-center gap-5 border-t border-ibms-veil pt-5">
-                <span className="label text-ibms-slate">01</span>
+              <div className="mt-14 flex items-center gap-5 border-t border-white/20 pt-5">
+                <span className="label text-white/60">01</span>
                 <span className="h-px w-14 bg-ibms-blue" />
-                <span className="text-xs font-semibold text-ibms-slate">Formation / Innovation / Impact</span>
+                <span className="text-xs font-semibold text-white/60">Formation / Innovation / Impact</span>
               </div>
             </Reveal>
           </div>
