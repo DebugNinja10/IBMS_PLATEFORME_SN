@@ -20,18 +20,19 @@ export function Vision() {
             </Reveal>
             <Reveal delay={200}>
               <h2 className="text-hero font-extrabold mb-8 max-w-4xl">
-                Faire de la compétence
+                Faire émerger les talents
                 <br />
-                un moteur d'<span className="text-ibms-cyan">innovation</span>
+                et les solutions numériques
                 <br />
-                et de transformation.
+                <span className="text-ibms-cyan">de demain.</span>
               </h2>
             </Reveal>
             <Reveal delay={300}>
               <p className="text-lg text-white/60 leading-relaxed max-w-xl">
-                IBMS aspire à donner aux compétences numériques une place essentielle
-                dans le développement, en créant un environnement favorable pour
-                les apprenants, les entreprises et les institutions.
+                Nous ambitionnons de contribuer à la construction d’un écosystème numérique
+                africain plus innovant, plus compétent et plus inclusif, où chaque talent peut
+                transformer ses compétences en opportunités et chaque organisation peut tirer
+                pleinement parti de la technologie.
               </p>
             </Reveal>
           </div>

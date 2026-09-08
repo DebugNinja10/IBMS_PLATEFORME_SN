@@ -16,7 +16,7 @@ export function Services() {
     <section id="services" className="section-pad bg-white">
       <div className="container-ibms">
         <div className="mb-12 grid grid-cols-12 gap-6">
-          <div className="col-span-12 md:col-span-8"><Reveal><div className="mb-4 flex items-center gap-3"><span className="label text-ibms-blue">04</span><span className="h-px w-12 bg-ibms-blue" /><span className="label text-ibms-slate">Expertises</span></div><h2 className="text-section-title font-extrabold text-ibms-ink">Des solutions pour <span className="text-gradient">transformer.</span></h2></Reveal></div>
+          <div className="col-span-12 md:col-span-8"><Reveal><div className="mb-4 flex items-center gap-3"><span className="label text-ibms-blue">04</span><span className="h-px w-12 bg-ibms-blue" /><span className="label text-ibms-slate">Solutions numériques</span></div><h2 className="text-section-title font-extrabold text-ibms-ink">Transformons vos idées <span className="text-gradient">en solutions.</span></h2><p className="mt-5 max-w-2xl text-base leading-relaxed text-ibms-slateDark">Nous concevons des solutions numériques modernes et adaptées aux besoins des entreprises, entrepreneurs et organisations. De la conception au déploiement, nous transformons vos problématiques et vos idées en outils simples, performants et évolutifs.</p></Reveal></div>
           <div className="col-span-12 flex items-end md:col-span-4 md:justify-end"><Reveal delay={150}><ArrowLink to="/services" variant="blue">Découvrir nos services</ArrowLink></Reveal></div>
         </div>
 

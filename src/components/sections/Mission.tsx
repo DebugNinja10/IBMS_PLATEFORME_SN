@@ -3,10 +3,10 @@ import { images } from '@/data/site';
 import { Check } from 'lucide-react';
 
 const points = [
-  'Faciliter la collaboration et le réseautage',
-  "Soutenir l'innovation et les projets",
-  'Renforcer les compétences numériques',
-  'Promouvoir une technologie éthique et responsable',
+  'Proposer des formations de qualité',
+  'Développer des compétences concrètes',
+  'Concevoir des solutions adaptées',
+  'Accompagner la transformation digitale',
 ];
 
 export function Mission() {
@@ -19,15 +19,16 @@ export function Mission() {
               <span className="text-5xl font-extrabold text-ibms-veil block mb-4">02</span>
               <div className="label text-ibms-blue mb-4">Notre mission</div>
               <h2 className="text-section-title font-extrabold text-ibms-ink mb-6">
-                Naviguer dans l'ère
+                Rendre le numérique accessible
                 <br />
-                du numérique, <span className="text-gradient">ensemble.</span>
+                et créateur <span className="text-gradient">d'opportunités.</span>
               </h2>
             </Reveal>
             <Reveal delay={100}>
               <p className="text-base text-ibms-slateDark leading-relaxed mb-8">
-                Nous accompagnons l'écosystème dans l'adoption des technologies
-                numériques en :
+                Notre mission est de contribuer au développement des compétences numériques
+                et à la transformation digitale en proposant des formations de qualité et des
+                solutions technologiques répondant aux réalités et aux besoins de notre environnement.
               </p>
             </Reveal>
             <Reveal delay={200}>

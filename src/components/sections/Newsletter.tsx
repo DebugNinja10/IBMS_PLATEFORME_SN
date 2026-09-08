@@ -16,13 +16,13 @@ export function Newsletter() {
 
             <div className="relative grid grid-cols-12 gap-6 items-center">
               <div className="col-span-12 md:col-span-7">
-                <div className="label text-white/70 mb-4">Newsletter</div>
+                <div className="label text-white/70 mb-4">Passez à l’action</div>
                 <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-4">
-                  La newsletter pour ne rien rater.
+                  Votre prochaine compétence commence aujourd’hui.
                 </h2>
                 <p className="text-base text-white/70 max-w-md">
-                  Recevez les offres, conseils et événements IBMS directement
-                  dans votre boîte mail.
+                  Apprenez, innovez et construisez avec IBMS. Parce que chaque compétence
+                  peut devenir une opportunité et chaque idée peut devenir une solution.
                 </p>
               </div>
               <div className="col-span-12 md:col-span-5">

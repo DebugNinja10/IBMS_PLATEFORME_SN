@@ -4,13 +4,14 @@ const items = [
   { num: '01', title: 'Quoi ?', desc: "Un programme de formation et d'accompagnement multidisciplinaire, opéré sur-mesure pour répondre aux besoins réels du marché et des organisations." },
   { num: '02', title: 'Pourquoi ?', desc: "En servant la croissance des talents et des entreprises, IBMS s'inscrit dans une mission plus large : contribuer au développement économique et technologique." },
   { num: '03', title: 'Comment ?', desc: "Par un accompagnement opérationnel : ateliers, mentorat, mise en réseau et accès aux ressources, pour transformer les ambitions en résultats mesurables." },
+  { num: '04', title: 'Vacances Digital', desc: "Et si vous profitiez de vos vacances pour investir dans votre avenir ? IBMS Vacances Digital offre une opportunité unique de découvrir le numérique, développer de nouvelles compétences et préparer son avenir professionnel à travers des formations pratiques, accessibles et adaptées à différents profils." },
 ];
 
 export function WhatWhyHow() {
   return (
     <section className="section-pad bg-ibms-cream">
       <div className="container-ibms">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-4">
           {items.map((item, idx) => (
             <Reveal key={item.num} delay={idx * 120}>
               <div className="card h-full group">

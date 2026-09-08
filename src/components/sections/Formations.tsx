@@ -16,7 +16,8 @@ export function Formations() {
           <div className="col-span-12 md:col-span-7">
             <Reveal>
               <div className="mb-4 flex items-center gap-3"><span className="label text-ibms-blue">03</span><span className="h-px w-12 bg-ibms-blue" /><span className="label text-ibms-slate">Formations</span></div>
-              <h2 className="text-section-title font-extrabold text-ibms-ink">Les compétences pour le <span className="text-gradient">monde de demain.</span></h2>
+              <h2 className="text-section-title font-extrabold text-ibms-ink">Apprenez aujourd’hui les compétences qui construiront <span className="text-gradient">votre avenir.</span></h2>
+              <p className="mt-5 max-w-2xl text-base leading-relaxed text-ibms-slateDark">Nos formations sont conçues pour permettre à chacun d’acquérir des compétences concrètes et directement applicables dans les domaines du numérique. De l’intelligence artificielle au développement web, en passant par le marketing digital et la bureautique, IBMS vous accompagne dans votre progression.</p>
             </Reveal>
           </div>
           <div className="col-span-12 flex items-end md:col-span-5 md:justify-end"><Reveal delay={150}><ArrowLink to="/formations" variant="blue">Voir le catalogue complet</ArrowLink></Reveal></div>

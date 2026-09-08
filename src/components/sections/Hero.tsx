@@ -20,7 +20,7 @@ export function Hero() {
             <Reveal>
               <div className="mb-7 flex items-center gap-3">
                 <span className="h-2 w-2 rounded-full bg-ibms-cyan" />
-                <span className="label text-ibms-blue">Institut de formation et d'innovation</span>
+                <span className="label text-ibms-blue">Formation / Innovation / Solutions numériques</span>
                 <span className="hidden h-px w-16 bg-ibms-veil sm:block" />
                 <span className="hidden text-[10px] font-bold uppercase tracking-widest text-ibms-slate sm:block">Dakar / SN</span>
               </div>
@@ -28,19 +28,19 @@ export function Hero() {
 
             <Reveal delay={100}>
               <h1 className="max-w-4xl text-hero font-extrabold text-ibms-ink">
-                Construire les compétences qui{' '}
+                Transformez vos compétences{' '}
                 <span className="relative inline-block text-ibms-blue">
-                  façonnent
+                  en opportunités.
                   <span className="absolute -bottom-2 left-0 h-1 w-2/3 bg-ibms-cyan" />
-                </span>{' '}
-                l'avenir.
+                </span>
               </h1>
             </Reveal>
 
             <Reveal delay={200}>
               <p className="mt-7 max-w-xl text-lg leading-relaxed text-ibms-slateDark">
-                IBMS accompagne les talents, les organisations et les projets technologiques
-                pour transformer la compétence en opportunité.
+                IBMS accompagne les jeunes, les professionnels, les entrepreneurs et les organisations
+                dans leur transformation numérique à travers la formation, l'innovation et la conception
+                de solutions digitales adaptées aux besoins réels.
               </p>
             </Reveal>
 
@@ -72,7 +72,7 @@ export function Hero() {
                 <div className="absolute right-0 top-10 h-[390px] w-[390px] rounded-full bg-ibms-blue md:h-[470px] md:w-[470px]" />
                 <div className="absolute right-10 top-20 h-[310px] w-[310px] rounded-full border border-white/50 md:right-20 md:h-[390px] md:w-[390px]" />
                 <div className="absolute right-0 top-28 z-10 h-[320px] w-[270px] overflow-hidden rounded-[9rem_9rem_1.5rem_1.5rem] border-8 border-white shadow-2xl shadow-ibms-blue/20 md:right-10 md:h-[410px] md:w-[340px]">
-                  <img src={images.heroMain} alt="Apprenants en formation technologique" className="h-full w-full object-cover" loading="eager" />
+                  <img src="/assets/images/logos/img11.jpeg" alt="IBMS en action" className="h-full w-full object-cover" loading="eager" />
                   <div className="absolute inset-0 bg-gradient-to-t from-ibms-navy/45 to-transparent" />
                 </div>
                 <div className="absolute left-0 top-0 z-20 flex h-28 w-28 items-center justify-center rounded-full border border-ibms-ink/10 bg-white shadow-xl md:h-36 md:w-36">

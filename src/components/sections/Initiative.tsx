@@ -10,9 +10,9 @@ export function Initiative() {
             <Reveal>
               <div className="label text-ibms-blue mb-4">L'initiative IBMS</div>
               <h2 className="text-section-title font-extrabold text-ibms-ink">
-                Une institution
+                Construire les compétences
                 <br />
-                <span className="text-gradient">au service du savoir.</span>
+                <span className="text-gradient">numériques de demain.</span>
               </h2>
             </Reveal>
           </div>
@@ -20,17 +20,16 @@ export function Initiative() {
           <div className="col-span-12 lg:col-span-7 lg:col-start-6">
             <Reveal delay={100}>
               <p className="text-lg text-ibms-slateDark leading-relaxed mb-6">
-                IBMS est une initiative stratégique dédiée à structurer, développer et
-                dynamiser l'écosystème des compétences numériques. Nous œuvrons pour
-                que la technologie devienne un véritable levier de transformation
-                économique, sociale et technologique.
+                IBMS est une structure dédiée au développement des compétences numériques
+                et à la création de solutions technologiques. Notre ambition est de rendre
+                le numérique plus accessible, plus pratique et plus utile, en accompagnant
+                les talents et les organisations dans leur évolution.
               </p>
             </Reveal>
             <Reveal delay={200}>
               <p className="text-base text-ibms-slate leading-relaxed mb-8">
-                Nous créons un environnement favorable pour les apprenants, les entreprises,
-                les institutions et les talents, en proposant des parcours de formation
-                rigoureux et un accompagnement adapté aux réalités du marché africain.
+                Nous accompagnons les jeunes, les professionnels, les entrepreneurs et les
+                organisations avec des parcours pratiques et des solutions adaptées à leurs besoins.
               </p>
             </Reveal>
             <Reveal delay={300}>
