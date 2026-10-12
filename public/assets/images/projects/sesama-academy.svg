@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" fill="none">
+  <rect width="800" height="520" rx="28" fill="#F0F7FF"/>
+  <circle cx="660" cy="110" r="115" fill="#D8EAFE"/>
+  <circle cx="120" cy="440" r="145" fill="#DDF5EC"/>
+  <rect x="175" y="85" width="450" height="330" rx="24" fill="white" stroke="#D7E5F5" stroke-width="3"/>
+  <rect x="205" y="115" width="390" height="48" rx="12" fill="#174A83"/>
+  <circle cx="229" cy="139" r="6" fill="#8BE0C1"/>
+  <rect x="247" y="132" width="140" height="13" rx="6" fill="#FFFFFF"/>
+  <rect x="210" y="190" width="170" height="185" rx="16" fill="#E7F2FF"/>
+  <path d="M252 253L295 220L338 253V309H252V253Z" fill="#2D77C7"/>
+  <path d="M239 252L295 207L351 252" stroke="#174A83" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="273" y="270" width="44" height="39" rx="5" fill="#FFFFFF"/>
+  <rect x="405" y="201" width="160" height="15" rx="7" fill="#174A83"/>
+  <rect x="405" y="230" width="132" height="10" rx="5" fill="#B6CDE6"/>
+  <rect x="405" y="251" width="145" height="10" rx="5" fill="#B6CDE6"/>
+  <rect x="405" y="286" width="112" height="38" rx="10" fill="#DDF5EC"/>
+  <path d="M427 305L437 315L456 294" stroke="#16866A" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="400" y="462" text-anchor="middle" font-family="Arial,sans-serif" font-size="25" font-weight="700" fill="#174A83">SESAMA ACADEMY</text>
+</svg>

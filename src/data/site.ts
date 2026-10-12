@@ -228,7 +228,7 @@ export type Project = {
   num: string;
   title: string;
   category: string;
-  year: string;
+  status: string;
   desc: string;
   tech: string[];
   result: string;
@@ -236,99 +236,185 @@ export type Project = {
   challenge: string;
   solution: string[];
   impact: string[];
+  url?: string;
 };
 
 export const projects: Project[] = [
   {
     num: '01',
-    title: 'Plateforme E-learning',
-    category: 'Éducation',
-    year: '2025',
-    desc: "Conception et déploiement d'une plateforme d'apprentissage en ligne pour 500+ apprenants.",
-    tech: ['React', 'Node.js', 'PostgreSQL'],
-    result: '500+ utilisateurs actifs',
-    image: images.project1,
-    challenge: "IBMS avait besoin d'une plateforme unifiée pour gérer ses formations en ligne, le suivi des apprenants et l'évaluation des projets. La solution devait être accessible, fiable et capable de gérer des centaines d'utilisateurs simultanés.",
+    title: 'AfriSight',
+    category: 'Accessibilité & IoT',
+    status: 'Prototype fonctionnel',
+    desc: "Des lunettes intelligentes conçues pour faciliter les déplacements des personnes aveugles ou malvoyantes grâce à la détection d’obstacles et à des alertes vocales.",
+    tech: ['ESP32-C3', 'Bluetooth Low Energy', 'React', 'Web Bluetooth', 'Synthèse vocale'],
+    result: 'Détection d’obstacles et alertes vocales',
+    image: '/assets/images/projects/afrisight.svg',
+    challenge: "Les personnes aveugles ou malvoyantes peuvent rencontrer des obstacles difficiles à anticiper lors de leurs déplacements. AfriSight explore une assistance accessible, légère et connectée.",
     solution: [
-      "Conception d'une architecture web moderne avec React pour le front-end et Node.js pour le back-end.",
-      "Mise en place d'une base de données PostgreSQL pour gérer les utilisateurs, les cours et les évaluations.",
-      "Développement d'un tableau de bord d'administration pour les formateurs et d'un espace personnel pour les apprenants.",
-      "Intégration d'un système de certification automatique à l'issue des parcours."
+      "Utilisation d’un capteur infrarouge relié à un microcontrôleur ESP32-C3 pour détecter un obstacle.",
+      "Transmission des événements au téléphone par Bluetooth Low Energy.",
+      "Connexion à une interface React permettant de recevoir les événements du dispositif.",
+      "Déclenchement d’une alerte vocale lorsqu’un obstacle est détecté."
     ],
     impact: [
-      "500+ apprenants formés simultanément sur la plateforme",
-      "Réduction de 40% du temps de gestion administrative",
-      "Disponibilité 24/7 des ressources pédagogiques",
-      "Taux de complétion des parcours de 78%"
+      "Prototype de détection d’obstacles et de transmission Bluetooth.",
+      "Alerte vocale intégrée à l’application.",
+      "Projet orienté vers une technologie plus inclusive et accessible.",
+      "La reconnaissance visuelle avancée reste distincte du dispositif de détection décrit ici."
     ],
   },
   {
     num: '02',
-    title: 'Application mobile bancaire',
-    category: 'Fintech',
-    year: '2024',
-    desc: "Développement d'une solution mobile sécurisée pour des transactions financières.",
-    tech: ['React Native', 'Firebase', 'OAuth'],
-    result: '98% de satisfaction',
-    image: images.project2,
-    challenge: "Un partenaire financier cherchait une application mobile permettant à ses clients d'effectuer des transactions en toute sécurité, avec une expérience utilisateur fluide et une conformité aux normes de sécurité les plus strictes.",
+    title: 'JËFAL',
+    category: 'IA vocale & Fintech inclusive',
+    status: 'En développement',
+    desc: "Un agent économique vocal pensé pour aider les commerçants, artisans et petits entrepreneurs à suivre leur activité, avec une approche adaptée aux usages locaux et à la langue wolof.",
+    tech: ['Python', 'FastAPI', 'PostgreSQL', 'SQLAlchemy', 'Reconnaissance vocale'],
+    result: 'Agent vocal métier en construction',
+    image: '/assets/images/projects/jefal.svg',
+    challenge: "De nombreux petits acteurs économiques suivent leurs ventes, dépenses, dettes et stocks dans des cahiers ou de mémoire. JËFAL vise à rendre la gestion quotidienne plus simple grâce à la voix.",
     solution: [
-      "Développement d'une application React Native pour iOS et Android à partir d'une base de code unique.",
-      "Intégration d'une authentification OAuth renforcée et d'une authentification biométrique.",
-      "Mise en place de Firebase pour les notifications en temps réel et l'analyse d'usage.",
-      "Tests de sécurité approfondis et audit par un tiers de confiance."
+      "Conception d’un backend API avec FastAPI et une base de données PostgreSQL.",
+      "Intégration en cours d’un modèle de reconnaissance vocale adapté au wolof.",
+      "Structuration d’intentions métier comme l’enregistrement d’une vente, d’une dépense ou d’un remboursement.",
+      "Développement progressif de la gestion des produits, du stock et du suivi de l’activité."
     ],
     impact: [
-      "98% de satisfaction utilisateur",
-      "Zéro incident de sécurité depuis le lancement",
-      "50 000+ téléchargements en 6 mois",
-      "Réduction de 60% des visites en agence"
+      "Approche voice-first adaptée aux réalités des petites activités économiques.",
+      "Prise en compte des opérations commerciales courantes.",
+      "Orientation vers une meilleure traçabilité de l’activité.",
+      "Le produit est en développement : aucun déploiement à grande échelle n’est revendiqué."
     ],
   },
   {
     num: '03',
-    title: 'Dashboard analytics',
-    category: 'Data',
-    year: '2024',
-    desc: "Tableau de bord d'analyse de données pour le pilotage d'activités éducatives.",
-    tech: ['Vue.js', 'Python', 'D3.js'],
-    result: '40% de gain de temps',
-    image: images.project3,
-    challenge: "L'institution avait besoin d'un outil pour visualiser et analyser les données d'apprentissage : progression des apprenants, taux de complétion, performance par module. Les données étaient dispersées et difficiles à exploiter.",
+    title: 'JOJ Dakar Transport',
+    category: 'Mobilité & Transport',
+    status: 'Projet en développement',
+    desc: "Une solution numérique orientée vers l’organisation du transport, la gestion des véhicules et les réservations, avec des interfaces adaptées aux différents rôles.",
+    tech: ['TypeScript', 'React', 'Supabase'],
+    result: 'Solution de gestion du transport en construction',
+    image: '/assets/images/projects/joj-transport.svg',
+    challenge: "La gestion du transport nécessite de coordonner les véhicules, les réservations et les informations entre les différents intervenants. Le projet explore une centralisation de ces opérations.",
     solution: [
-      "Création d'un pipeline de données en Python pour collecter, nettoyer et agréger les sources.",
-      "Développement d'un tableau de bord interactif en Vue.js avec des visualisations D3.js.",
-      "Mise en place d'indicateurs clés de performance personnalisables par formation.",
-      "Export automatique de rapports pour les formateurs et la direction."
+      "Conception d’une interface web basée sur TypeScript.",
+      "Structuration des fonctionnalités de gestion des véhicules et des réservations.",
+      "Utilisation de Supabase dans l’architecture de l’application.",
+      "Prise en compte des rôles utilisateurs et de la synchronisation des données."
     ],
     impact: [
-      "40% de gain de temps sur le reporting",
-      "Décisions pédagogiques basées sur la donnée en temps réel",
-      "Identification rapide des modules à améliorer",
-      "Adoption par 100% de l'équipe pédagogique"
+      "Centralisation envisagée des informations liées au transport.",
+      "Organisation des opérations dans une interface numérique.",
+      "Projet présenté comme étant en développement, sans chiffres de performance non vérifiés."
     ],
   },
   {
     num: '04',
-    title: 'Site institutionnel',
-    category: 'Web',
-    year: '2025',
-    desc: "Refonte complète d'une plateforme institutionnelle avec design éditorial premium.",
-    tech: ['React', 'Tailwind', 'Vite'],
-    result: 'Lancement réussi',
-    image: images.project4,
-    challenge: "IBMS souhaitait moderniser sa présence en ligne avec un site institutionnel reflétant la qualité de ses formations et son positionnement comme acteur de référence du numérique en Afrique.",
+    title: 'Pharmacie H24',
+    category: 'Santé & Mobile',
+    status: 'Projet mobile',
+    desc: "Une application mobile dont l’objectif est de faciliter la recherche de pharmacies de garde et l’accès aux informations utiles pour le public.",
+    tech: ['Dart', 'Flutter'],
+    result: 'Application mobile en développement',
+    image: '/assets/images/projects/pharmacie-h24.svg',
+    challenge: "Trouver rapidement une pharmacie de garde peut être difficile lorsqu’on ne dispose pas d’informations pratiques facilement accessibles.",
     solution: [
-      "Conception d'un design éditorial premium avec une identité visuelle forte et des animations soignées.",
-      "Développement en React avec Tailwind CSS et Vite pour des performances optimales.",
-      "Architecture multi-pages avec routing pour une expérience de navigation fluide.",
-      "Optimisation SEO, accessibilité et responsive design sur tous les supports."
+      "Développement du projet avec l’écosystème Flutter et Dart.",
+      "Conception d’une expérience mobile orientée vers la recherche d’informations.",
+      "Orientation fonctionnelle vers la recherche de pharmacies de garde.",
+      "La disponibilité en temps réel des pharmacies doit être confirmée par des données fiables avant d’être présentée comme opérationnelle."
     ],
     impact: [
-      "Lancement réussi en 2025",
-      "Score Lighthouse de 95+ sur tous les critères",
-      "Augmentation du temps passé sur le site de 200%",
-      "Taux de rebond divisé par 2"
+      "Projet conçu autour d’un besoin concret d’accès à l’information en santé.",
+      "Approche mobile adaptée à la consultation en déplacement.",
+      "Aucune couverture nationale ni disponibilité en temps réel n’est revendiquée sans vérification."
+    ],
+  },
+  {
+    num: '05',
+    title: 'MaxiDélices',
+    category: 'Web & Commerce',
+    status: 'Site vitrine',
+    desc: "Un site vitrine professionnel destiné à présenter l’activité d’une pâtisserie et à renforcer sa présence sur le web.",
+    tech: ['HTML', 'CSS', 'JavaScript'],
+    result: 'Site vitrine web',
+    image: '/assets/images/projects/maxidelices.svg',
+    challenge: "Une activité de pâtisserie doit pouvoir présenter ses produits et son identité de manière claire, attractive et accessible sur différents écrans.",
+    solution: [
+      "Création d’une structure web avec HTML.",
+      "Mise en forme des pages avec CSS.",
+      "Ajout d’interactions avec JavaScript.",
+      "Conception d’une présentation adaptée à une activité commerciale."
+    ],
+    impact: [
+      "Présence numérique dédiée à la pâtisserie.",
+      "Présentation structurée de l’activité et de son identité.",
+      "Technologies web standards, légères et faciles à maintenir."
+    ],
+  },
+  {
+    num: '06',
+    title: 'Panafrica Étude & Voyage',
+    category: 'Web & Services',
+    status: 'Site vitrine',
+    desc: "Un site vitrine pour une structure spécialisée dans l’accompagnement autour des études et des voyages.",
+    tech: ['HTML', 'CSS', 'JavaScript'],
+    result: 'Site vitrine web',
+    image: '/assets/images/projects/panafrica.svg',
+    challenge: "Les personnes intéressées par des études ou un projet de voyage ont besoin de comprendre les services proposés et de trouver facilement les informations utiles.",
+    solution: [
+      "Conception d’une présence web dédiée à la structure.",
+      "Organisation des contenus pour présenter les services.",
+      "Utilisation des technologies HTML, CSS et JavaScript.",
+      "Orientation vers une navigation claire et une présentation professionnelle."
+    ],
+    impact: [
+      "Espace web dédié à la présentation des services.",
+      "Accès centralisé aux informations de la structure.",
+      "Aucun volume de visiteurs ni résultat commercial n’est avancé sans données vérifiables."
+    ],
+  },
+
+  {
+    num: '07',
+    title: 'SESAMA Academy',
+    category: 'Éducation & Formation',
+    status: 'Site en ligne',
+    desc: 'Une plateforme dédiée à la formation et à l’apprentissage.',
+    tech: ['Web', 'JavaScript', 'Vercel'],
+    result: 'Plateforme de formation en ligne',
+    image: '/assets/images/projects/sesama-academy.svg',
+    url: 'https://sesama-academy.vercel.app',
+    challenge: 'Faciliter la présentation des formations et l’accès aux informations pédagogiques.',
+    solution: [
+      'Conception d’une présence numérique consacrée à la formation.',
+      'Organisation des contenus pour faciliter la découverte des parcours.',
+      'Mise à disposition d’un site accessible en ligne.'
+    ],
+    impact: [
+      'Une présence numérique dédiée à la formation.',
+      'Un point d’accès en ligne aux informations de la plateforme.'
+    ],
+  },
+  {
+    num: '08',
+    title: 'Incubateur des entrepreneurs sociaux',
+    category: 'Entrepreneuriat social',
+    status: 'Site en ligne',
+    desc: 'Une plateforme consacrée à l’entrepreneuriat social et à l’accompagnement des initiatives.',
+    tech: ['Web', 'JavaScript', 'Vercel'],
+    result: 'Site de présentation de l’incubateur',
+    image: '/assets/images/projects/incubateur-social.svg',
+    url: 'https://incubateurdesentreprneurssociaux.vercel.app/',
+    challenge: 'Présenter l’incubateur et rendre ses informations accessibles aux porteurs de projets.',
+    solution: [
+      'Création d’un espace numérique consacré à l’incubateur.',
+      'Organisation des informations relatives à sa mission.',
+      'Mise à disposition du site en ligne.'
+    ],
+    impact: [
+      'Une présence numérique dédiée à l’entrepreneuriat social.',
+      'Un accès en ligne aux informations de l’incubateur.'
     ],
   },
 ];

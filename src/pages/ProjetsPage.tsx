@@ -24,7 +24,7 @@ export function ProjetsPage() {
                 <div className="absolute inset-0 bg-gradient-to-t from-ibms-navy via-ibms-navy/40 to-transparent" />
                 <div className="relative flex min-h-[430px] flex-col justify-between p-7 md:min-h-[540px] md:p-10">
                   <div className="flex items-center justify-between">
-                    <span className="label text-ibms-cyan">Projet principal / {main.year}</span>
+                    <span className="label text-ibms-cyan">Projet principal / {main.status}</span>
                     <span className="flex h-10 w-10 items-center justify-center rounded-full border border-white/30 transition-colors group-hover:border-ibms-cyan group-hover:text-ibms-cyan"><ArrowUpRight className="h-5 w-5" /></span>
                   </div>
                   <div>
@@ -52,7 +52,7 @@ export function ProjetsPage() {
                 <Reveal key={project.num} delay={180 + index * 80}>
                   <Link to={`/projets/${project.num}`} className="group flex items-center gap-5 border-t border-ibms-ink/15 py-5">
                     <span className="label text-ibms-slate transition-colors group-hover:text-ibms-blue">{project.num}</span>
-                    <div className="flex-1"><div className="mb-1 label text-ibms-slate">{project.category} / {project.year}</div><h3 className="text-lg font-bold text-ibms-ink transition-colors group-hover:text-ibms-blue">{project.title}</h3></div>
+                    <div className="flex-1"><div className="mb-1 label text-ibms-slate">{project.category} / {project.status}</div><h3 className="text-lg font-bold text-ibms-ink transition-colors group-hover:text-ibms-blue">{project.title}</h3></div>
                     <ArrowUpRight className="h-5 w-5 text-ibms-slate transition-all group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:text-ibms-blue" />
                   </Link>
                 </Reveal>

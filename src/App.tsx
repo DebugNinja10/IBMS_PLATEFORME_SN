@@ -3,9 +3,7 @@ import { MessageCircle } from 'lucide-react';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { Hero } from '@/components/sections/Hero';
-import { Initiative } from '@/components/sections/Initiative';
 import { Vision } from '@/components/sections/Vision';
-import { WhatWhyHow } from '@/components/sections/WhatWhyHow';
 import { Mission } from '@/components/sections/Mission';
 import { KeyFigures } from '@/components/sections/KeyFigures';
 import { Formations } from '@/components/sections/Formations';
@@ -46,9 +44,7 @@ function HomePage() {
   return (
     <>
       <Hero />
-      <Initiative />
       <Vision />
-      <WhatWhyHow />
       <Mission />
       <KeyFigures />
       <Formations />

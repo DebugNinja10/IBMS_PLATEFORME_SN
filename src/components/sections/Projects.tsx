@@ -21,7 +21,7 @@ export function Projects() {
               <img src={main.image} alt={main.title} className="absolute inset-0 h-full w-full object-cover opacity-60 transition-transform duration-700 ease-ibms group-hover:scale-105" loading="lazy" />
               <div className="absolute inset-0 bg-gradient-to-t from-ibms-navy via-ibms-navy/40 to-transparent" />
               <div className="relative flex min-h-[430px] flex-col justify-between p-7 md:min-h-[540px] md:p-10">
-                <div className="flex items-center justify-between"><span className="label text-ibms-cyan">Projet principal / {main.year}</span><span className="flex h-10 w-10 items-center justify-center rounded-full border border-white/30 transition-colors group-hover:border-ibms-cyan group-hover:text-ibms-cyan"><ArrowUpRight className="h-5 w-5" /></span></div>
+                <div className="flex items-center justify-between"><span className="label text-ibms-cyan">Projet principal / {main.status}</span><span className="flex h-10 w-10 items-center justify-center rounded-full border border-white/30 transition-colors group-hover:border-ibms-cyan group-hover:text-ibms-cyan"><ArrowUpRight className="h-5 w-5" /></span></div>
                 <div><div className="mb-3 flex items-center gap-3"><span className="label text-white/70">{main.num}</span><span className="h-px w-8 bg-white/40" /><span className="label text-white/70">{main.category}</span></div><h3 className="mb-4 text-3xl font-extrabold transition-colors duration-300 group-hover:text-ibms-cyan md:text-5xl">{main.title}</h3><p className="max-w-lg text-sm leading-relaxed text-white/70">{main.desc}</p><div className="mt-5 flex flex-wrap gap-2">{main.tech.map((tech) => <span key={tech} className="rounded-full border border-white/20 px-3 py-1 text-xs text-white/70">{tech}</span>)}</div></div>
               </div>
             </Link>
@@ -37,7 +37,7 @@ export function Projects() {
               <Reveal key={project.num} delay={180 + index * 80}>
                 <Link to={`/projets/${project.num}`} className="group flex items-center gap-5 border-t border-ibms-ink/15 py-5">
                   <span className="label text-ibms-slate transition-colors group-hover:text-ibms-blue">{project.num}</span>
-                  <div className="flex-1"><div className="mb-1 label text-ibms-slate">{project.category} / {project.year}</div><h3 className="text-lg font-bold text-ibms-ink transition-colors group-hover:text-ibms-blue">{project.title}</h3></div>
+                  <div className="flex-1"><div className="mb-1 label text-ibms-slate">{project.category} / {project.status}</div><h3 className="text-lg font-bold text-ibms-ink transition-colors group-hover:text-ibms-blue">{project.title}</h3></div>
                   <ArrowUpRight className="h-5 w-5 text-ibms-slate transition-all group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:text-ibms-blue" />
                 </Link>
               </Reveal>

@@ -31,7 +31,7 @@ export function ProjetDetailPage() {
               <Reveal delay={100}>
                 <div className="mb-6 flex flex-wrap items-center gap-3">
                   <span className="rounded-lg bg-ibms-blue/10 px-3 py-1 text-xs font-semibold text-ibms-blue">{project.category}</span>
-                  <span className="text-xs text-ibms-slate">{project.year}</span>
+                  <span className="text-xs text-ibms-slate">{project.status}</span>
                   <span className="h-px w-4 bg-ibms-veil" />
                   <span className="text-xs font-semibold text-ibms-slate">Résultat : {project.result}</span>
                 </div>
@@ -72,7 +72,7 @@ export function ProjetDetailPage() {
             <div className="col-span-12 lg:col-span-5">
               <Reveal delay={200}>
                 <div className="sticky top-28 rounded-3xl border border-ibms-veil bg-ibms-cream p-6">
-                  <h3 className="mb-5 text-lg font-extrabold text-ibms-ink">Impact mesuré</h3>
+                  <h3 className="mb-5 text-lg font-extrabold text-ibms-ink">Points clés du projet</h3>
                   <ul className="space-y-4">
                     {project.impact.map((impact, idx) => (
                       <li key={idx} className="flex items-start gap-3">
@@ -105,7 +105,7 @@ export function ProjetDetailPage() {
                     <div className="mb-3 flex items-center gap-3">
                       <span className="label text-ibms-slate">{p.num}</span>
                       <span className="h-px w-4 bg-ibms-veil" />
-                      <span className="text-xs text-ibms-slate">{p.category} / {p.year}</span>
+                      <span className="text-xs text-ibms-slate">{p.category} / {p.status}</span>
                     </div>
                     <h3 className="mb-2 text-lg font-bold text-ibms-ink transition-colors duration-300 group-hover:text-ibms-blue">{p.title}</h3>
                     <p className="text-sm leading-relaxed text-ibms-slate">{p.desc}</p>
