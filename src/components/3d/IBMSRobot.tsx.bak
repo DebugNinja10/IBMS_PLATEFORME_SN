@@ -1,0 +1,247 @@
+import { Suspense, useEffect, useMemo, useRef } from 'react';
+import { Canvas, useFrame } from '@react-three/fiber';
+import {
+  ContactShadows,
+  Html,
+  useAnimations,
+  useGLTF,
+} from '@react-three/drei';
+import * as THREE from 'three';
+
+function DeskModel() {
+  const { scene } = useGLTF('/models/ibms-desk.glb');
+
+  return (
+    <group position={[0.65, -0.58, -0.35]} scale={0.82}>
+      <primitive object={scene} />
+    </group>
+  );
+}
+
+function RobotModel() {
+  const robotRef = useRef<THREE.Group>(null);
+  const { scene, animations } = useGLTF('/models/ibms-robot.glb');
+  const { actions } = useAnimations(animations, robotRef);
+
+  useEffect(() => {
+    const sitting = actions['Sitting'];
+    const idle = actions['Idle'];
+    const action = sitting ?? idle;
+
+    if (!action) return;
+
+    action.reset().fadeIn(0.5).play();
+
+    return () => {
+      action.fadeOut(0.25);
+    };
+  }, [actions]);
+
+  useFrame((state) => {
+    if (!robotRef.current) return;
+
+    robotRef.current.position.y =
+      0.48 + Math.sin(state.clock.elapsedTime * 1.2) * 0.012;
+
+    robotRef.current.rotation.y =
+      Math.PI / 2 + Math.sin(state.clock.elapsedTime * 0.3) * 0.025;
+  });
+
+  return (
+    <group
+      ref={robotRef}
+      position={[-0.48, 0.48, -0.15]}
+      scale={0.72}
+    >
+      <primitive object={scene} />
+    </group>
+  );
+}
+
+function DigitalNetwork() {
+  const networkRef = useRef<THREE.Group>(null);
+
+  const { pointsGeometry, linesGeometry } = useMemo(() => {
+    const points: number[] = [];
+    const lines: number[] = [];
+    const count = 30;
+
+    for (let i = 0; i < count; i++) {
+      const t = i / (count - 1);
+      const x = -1.9 + t * 3.8;
+      const y = 0.15 + Math.sin(t * Math.PI * 3) * 0.75;
+      const z = -0.9 + Math.cos(t * Math.PI * 4) * 0.22;
+
+      points.push(x, y, z);
+
+      if (i > 0) {
+        const previous = i - 1;
+        lines.push(
+          points[previous * 3],
+          points[previous * 3 + 1],
+          points[previous * 3 + 2],
+          x,
+          y,
+          z,
+        );
+      }
+
+      if (i > 2 && i % 3 === 0) {
+        const previous = i - 3;
+        lines.push(
+          points[previous * 3],
+          points[previous * 3 + 1],
+          points[previous * 3 + 2],
+          x,
+          y,
+          z,
+        );
+      }
+    }
+
+    const pointsGeometry = new THREE.BufferGeometry();
+    pointsGeometry.setAttribute(
+      'position',
+      new THREE.Float32BufferAttribute(points, 3),
+    );
+
+    const linesGeometry = new THREE.BufferGeometry();
+    linesGeometry.setAttribute(
+      'position',
+      new THREE.Float32BufferAttribute(lines, 3),
+    );
+
+    return { pointsGeometry, linesGeometry };
+  }, []);
+
+  useFrame((state) => {
+    if (!networkRef.current) return;
+
+    networkRef.current.rotation.y =
+      Math.sin(state.clock.elapsedTime * 0.16) * 0.045;
+  });
+
+  return (
+    <group ref={networkRef}>
+      <lineSegments geometry={linesGeometry}>
+        <lineBasicMaterial
+          color="#38DDF8"
+          transparent
+          opacity={0.34}
+          depthWrite={false}
+        />
+      </lineSegments>
+
+      <points geometry={pointsGeometry}>
+        <pointsMaterial
+          color="#6CEBFF"
+          size={0.035}
+          transparent
+          opacity={0.9}
+          sizeAttenuation
+          depthWrite={false}
+        />
+      </points>
+    </group>
+  );
+}
+
+function CodeOnScreen() {
+  return (
+    <Html
+      position={[0.56, 0.2, 0.14]}
+      distanceFactor={3.8}
+      style={{ pointerEvents: 'none' }}
+    >
+      <div className="w-[132px] overflow-hidden rounded-sm border border-cyan-300/30 bg-[#07162B]/95 p-2 font-mono text-[6px] leading-[1.65] text-cyan-100 shadow-[0_0_18px_rgba(34,211,238,0.22)] sm:w-[150px] sm:text-[7px]">
+        <div className="mb-1 flex items-center gap-1 border-b border-white/10 pb-1 text-white/60">
+          <span className="h-1 w-1 rounded-full bg-rose-400" />
+          <span className="h-1 w-1 rounded-full bg-amber-300" />
+          <span className="h-1 w-1 rounded-full bg-emerald-400" />
+          <span className="ml-1">ibms.ts</span>
+        </div>
+        <div><span className="text-fuchsia-300">const</span> future = {'{'}</div>
+        <div className="pl-2"><span className="text-sky-300">innovation</span>: true,</div>
+        <div className="pl-2"><span className="text-sky-300">build</span>: <span className="text-emerald-300">'together'</span>,</div>
+        <div>{'}'};</div>
+        <div className="mt-1 text-cyan-300/80"> // Build what's next</div>
+      </div>
+    </Html>
+  );
+}
+
+function SceneContent() {
+  return (
+    <>
+      <ambientLight intensity={1.8} />
+      <directionalLight
+        position={[3, 5, 4]}
+        intensity={2.6}
+        color="#FFFFFF"
+      />
+      <pointLight
+        position={[-2, 1.5, 2]}
+        intensity={22}
+        color="#27DDF5"
+      />
+      <pointLight
+        position={[2, 1, -1]}
+        intensity={15}
+        color="#3478FF"
+      />
+
+      <DigitalNetwork />
+
+      <Suspense fallback={null}>
+        <group>
+          <DeskModel />
+          <RobotModel />
+          <CodeOnScreen />
+        </group>
+
+        <ContactShadows
+          position={[0, -0.48, 0]}
+          opacity={0.26}
+          scale={4.5}
+          blur={2.5}
+          far={3}
+        />
+      </Suspense>
+    </>
+  );
+}
+
+export function IBMSRobot() {
+  return (
+    <div className="relative h-[470px] w-full overflow-visible md:h-[560px]">
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_52%_48%,rgba(34,211,238,0.16),transparent_65%)]"
+      />
+
+      <Canvas
+        camera={{ position: [0, 1.05, 5.8], fov: 39 }}
+        dpr={[1, 1.5]}
+        gl={{ antialias: true, alpha: true }}
+        onCreated={({ gl }) => {
+          gl.setClearColor('#000000', 0);
+        }}
+        fallback={
+          <div className="p-6 text-sm text-white/70">
+            La scène 3D nécessite un navigateur compatible WebGL.
+          </div>
+        }
+      >
+        <SceneContent />
+      </Canvas>
+
+      <div className="pointer-events-none absolute bottom-7 left-3 z-10 flex items-center gap-2 text-xs text-white/75">
+        <span className="h-2 w-2 animate-pulse rounded-full bg-cyan-300" />
+        <span className="tracking-wide">IBMS · Digital ecosystem</span>
+      </div>
+    </div>
+  );
+}
+
+useGLTF.preload('/models/ibms-desk.glb');
+useGLTF.preload('/models/ibms-robot.glb');

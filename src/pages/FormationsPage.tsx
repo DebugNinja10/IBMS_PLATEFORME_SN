@@ -1,9 +1,9 @@
 import { useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Clock, Monitor, Search, Signal, SlidersHorizontal, X } from 'lucide-react';
+import { ArrowRight, ArrowUpRight, Clock, Monitor, Search, Signal, SlidersHorizontal, X } from 'lucide-react';
 import { PageLayout } from '@/components/layout/PageLayout';
 import { Reveal } from '@/components/ui/Reveal';
-import { formations } from '@/data/site';
+import { formations, trainingProjects } from '@/data/site';
 
 export function FormationsPage() {
   const [query, setQuery] = useState('');
@@ -76,6 +76,34 @@ export function FormationsPage() {
               ))}
             </div>
           )}
+        </div>
+      </section>
+
+      <section id="projets-realises" className="section-pad bg-ibms-cream">
+        <div className="container-ibms">
+          <div className="mb-10 max-w-3xl">
+            <div className="mb-4 flex items-center gap-3"><span className="label text-ibms-blue">Sur le terrain</span><span className="h-px w-12 bg-ibms-blue" /><span className="label text-ibms-slate">Nos réalisations</span></div>
+            <h2 className="text-3xl font-extrabold text-ibms-ink md:text-4xl">Nos projets de formation.</h2>
+            <p className="mt-4 text-base leading-relaxed text-ibms-slateDark">Des programmes construits avec des partenaires pour transmettre des compétences numériques concrètes, de la programmation au marketing digital.</p>
+          </div>
+
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {trainingProjects.map((project, index) => (
+              <Reveal key={project.title} delay={index * 70}>
+                <Link to={`/formations/projets/${project.slug}`} className="group block h-full overflow-hidden rounded-2xl border border-ibms-veil bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+                  <div className="relative h-52 overflow-hidden">
+                    <img src={project.image} alt={`Projet de formation ${project.title}`} className="h-full w-full object-cover transition-transform duration-700 ease-ibms group-hover:scale-105" loading="lazy" />
+                    <span className="absolute left-4 top-4 rounded-full bg-white/95 px-3 py-1.5 text-xs font-bold text-ibms-blue shadow-sm">{project.theme}</span>
+                  </div>
+                  <div className="p-6">
+                    <div className="mb-3 flex items-center justify-between"><span className="label text-ibms-slate">Projet de formation</span><ArrowUpRight className="h-5 w-5 text-ibms-slate transition-all group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-ibms-blue" /></div>
+                    <h3 className="mb-3 text-xl font-extrabold text-ibms-ink">{project.title}</h3>
+                    <p className="text-sm leading-relaxed text-ibms-slateDark">{project.desc}</p>
+                  </div>
+                </Link>
+              </Reveal>
+            ))}
+          </div>
         </div>
       </section>
     </PageLayout>

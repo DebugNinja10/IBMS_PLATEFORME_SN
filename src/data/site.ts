@@ -4,12 +4,12 @@ export const images = {
   heroSecondary: 'https://images.pexels.com/photos/33920035/pexels-photo-33920035.jpeg?auto=compress&cs=tinysrgb&w=828',
   mission: 'https://images.pexels.com/photos/1181418/pexels-photo-1181418.jpeg?auto=compress&cs=tinysrgb&w=1200',
   contact: 'https://images.pexels.com/photos/8636605/pexels-photo-8636605.jpeg?auto=compress&cs=tinysrgb&w=1200',
-  formation1: 'https://images.pexels.com/photos/11025059/pexels-photo-11025059.jpeg?auto=compress&cs=tinysrgb&w=640',
-  formation2: 'https://images.pexels.com/photos/12969403/pexels-photo-12969403.jpeg?auto=compress&cs=tinysrgb&w=640',
-  formation3: 'https://images.pexels.com/photos/1181370/pexels-photo-1181370.jpeg?auto=compress&cs=tinysrgb&w=640',
-  formation4: 'https://images.pexels.com/photos/577195/pexels-photo-577195.jpeg?auto=compress&cs=tinysrgb&w=640',
-  formation5: 'https://images.pexels.com/photos/4872028/pexels-photo-4872028.jpeg?auto=compress&cs=tinysrgb&w=640',
-  formation6: 'https://images.pexels.com/photos/7792836/pexels-photo-7792836.jpeg?auto=compress&cs=tinysrgb&w=640',
+  formation1: '/assets/images/formations/WhatsApp%20Image%202026-10-14%20at%207.42.05%20AM%20(1).jpeg',
+  formation2: '/assets/images/formations/WhatsApp%20Image%202026-10-14%20at%207.42.06%20AM%20(1).jpeg',
+  formation3: '/assets/images/formations/WhatsApp%20Image%202026-10-14%20at%207.42.06%20AM.jpeg',
+  formation4: '/assets/images/formations/WhatsApp%20Image%202026-10-14%20at%207.42.05%20AM.jpeg',
+  formation5: '/assets/images/formations/formd.jpeg',
+  formation6: '/assets/images/formations/for1.jpeg',
   event1: 'https://images.pexels.com/photos/9275222/pexels-photo-9275222.jpeg?auto=compress&cs=tinysrgb&w=640',
   event2: 'https://images.pexels.com/photos/29180747/pexels-photo-29180747.jpeg?auto=compress&cs=tinysrgb&w=640',
   event3: 'https://images.pexels.com/photos/28683723/pexels-photo-28683723.jpeg?auto=compress&cs=tinysrgb&w=640',
@@ -118,9 +118,131 @@ export const formations: Formation[] = [
   { num: '05', title: 'Marketing Digital', desc: 'Stratégie, contenu et performance en ligne pour développer la présence digitale.', level: 'Débutant', duration: '3 mois', format: 'En ligne', image: images.formation5, category: 'Marketing' },
   { num: '06', title: 'Gestion de Projet', desc: 'Piloter des projets technologiques de A à Z avec les méthodes agiles modernes.', level: 'Intermédiaire', duration: '4 mois', format: 'Hybride', image: images.formation6, category: 'Management' },
   { num: '07', title: 'Création de contenus avec l\'IA', desc: 'Apprendre à produire et optimiser des contenus assistés par l\'IA pour le web et les réseaux sociaux.', level: 'Débutant à intermédiaire', duration: '2 mois', format: 'En ligne', image: images.formation2, category: 'Marketing' },
-  { num: '08', title: 'Bureautique', desc: 'Maîtriser les outils bureautiques essentiels pour être efficace en entreprise.', level: 'Débutant à intermédiaire', duration: '1 mois', format: 'En ligne', image: images.formation4, category: 'Productivité' },
+  { num: '08', title: 'Bureautique', desc: 'Maîtriser les outils bureautiques essentiels pour être efficace en entreprise.', level: 'Débutant à intermédiaire', duration: '1 mois', format: 'En ligne', image: images.formation6, category: 'Productivité' },
   { num: '09', title: 'Community Management', desc: 'Gérer et animer une communauté en ligne, créer des calendriers éditoriaux et analyser la performance.', level: 'Débutant', duration: '1.5 mois', format: 'En ligne', image: images.formation5, category: 'Marketing' },
   { num: '10', title: 'Excel avancé', desc: 'Fonctions avancées, tableaux croisés dynamiques, macros et bonnes pratiques pour l\'analyse de données.', level: 'Intermédiaire à avancé', duration: '1.5 mois', format: 'Hybride', image: images.formation3, category: 'Bureautique' },
+];
+
+export type TrainingProject = {
+  slug: string;
+  title: string;
+  theme: string;
+  image: string;
+  gallery: string[];
+  desc: string;
+  details: string[];
+};
+
+const imageGallery = (folder: string, filenames: string[]) =>
+  filenames.map((filename) => `/assets/images/${folder}/${encodeURIComponent(filename)}`);
+
+const gnafeGallery = imageGallery('gnafé', [
+  'WhatsApp Image 2026-10-14 at 8.06.26 AM (1).jpeg',
+  'WhatsApp Image 2026-10-14 at 8.06.26 AM (2).jpeg',
+  'WhatsApp Image 2026-10-14 at 8.06.26 AM (3).jpeg',
+  'WhatsApp Image 2026-10-14 at 8.06.26 AM (4).jpeg',
+  'WhatsApp Image 2026-10-14 at 8.06.26 AM (5).jpeg',
+  'WhatsApp Image 2026-10-14 at 8.06.26 AM.jpeg',
+  'WhatsApp Image 2026-10-14 at 8.06.27 AM (1).jpeg',
+  'WhatsApp Image 2026-10-14 at 8.06.27 AM (2).jpeg',
+  'WhatsApp Image 2026-10-14 at 8.06.27 AM (3).jpeg',
+  'WhatsApp Image 2026-10-14 at 8.06.27 AM (4).jpeg',
+  'WhatsApp Image 2026-10-14 at 8.06.27 AM (5).jpeg',
+  'WhatsApp Image 2026-10-14 at 8.06.27 AM (6).jpeg',
+  'WhatsApp Image 2026-10-14 at 8.06.27 AM.jpeg',
+  'WhatsApp Image 2026-10-14 at 8.06.33 AM (1).jpeg',
+  'WhatsApp Image 2026-10-14 at 8.06.33 AM (2).jpeg',
+  'WhatsApp Image 2026-10-14 at 8.06.33 AM.jpeg',
+  'WhatsApp Image 2026-10-14 at 8.06.34 AM (1).jpeg',
+  'WhatsApp Image 2026-10-14 at 8.06.34 AM (2).jpeg',
+  'WhatsApp Image 2026-10-14 at 8.06.34 AM (3).jpeg',
+  'WhatsApp Image 2026-10-14 at 8.06.34 AM (4).jpeg',
+  'WhatsApp Image 2026-10-14 at 8.06.34 AM (5).jpeg',
+  'WhatsApp Image 2026-10-14 at 8.06.34 AM (6).jpeg',
+  'WhatsApp Image 2026-10-14 at 8.06.34 AM.jpeg',
+  'WhatsApp Image 2026-10-14 at 8.06.35 AM.jpeg',
+]);
+
+const forcenGallery = imageGallery('forcen', [
+  'WhatsApp Image 2024-12-12 at 21.42.55 - Copy.jpeg',
+  'WhatsApp Image 2024-12-12 at 21.43.01 (1) - Copy.jpeg',
+  'WhatsApp Image 2024-12-12 at 21.43.01 (2).jpeg',
+  'WhatsApp Image 2024-12-12 at 21.43.01.jpeg',
+  'WhatsApp Image 2024-12-12 at 21.43.02 (1).jpeg',
+  'WhatsApp Image 2024-12-12 at 21.43.03 - Copy.jpeg',
+  'WhatsApp Image 2024-12-12 at 21.43.52 - Copy.jpeg',
+  'WhatsApp Image 2024-12-12 at 21.44.08.jpeg',
+  'WhatsApp Image 2024-12-12 at 21.44.09.jpeg',
+  'WhatsApp Image 2024-12-12 at 21.44.10.jpeg',
+  'WhatsApp Image 2024-12-12 at 21.44.11.jpeg',
+  'WhatsApp Image 2024-12-12 at 21.44.12.jpeg',
+  'WhatsApp Image 2024-12-12 at 21.44.13.jpeg',
+  'WhatsApp Image 2024-12-12 at 21.44.16.jpeg',
+  'WhatsApp Image 2024-12-12 at 21.44.22 (1).jpeg',
+  'WhatsApp Image 2024-12-12 at 21.44.22.jpeg',
+  'WhatsApp Image 2024-12-12 at 21.44.23 (2).jpeg',
+  'WhatsApp Image 2024-12-12 at 21.44.23.jpeg',
+  'WhatsApp Image 2024-12-12 at 21.44.27 (1).jpeg',
+  'WhatsApp Image 2024-12-12 at 21.44.28.jpeg',
+  'WhatsApp Image 2024-12-12 at 21.44.32 (2).jpeg',
+  'WhatsApp Image 2024-12-12 at 21.44.32.jpeg',
+  'WhatsApp Image 2024-12-12 at 21.44.33.jpeg',
+  'WhatsApp Image 2024-12-12 at 21.49.44.jpeg',
+  'WhatsApp Image 2024-12-12 at 21.49.45.jpeg',
+  'WhatsApp Image 2024-12-12 at 21.49.49.jpeg',
+  'WhatsApp Image 2024-12-12 at 21.49.50.jpeg',
+  'WhatsApp Image 2024-12-12 at 21.51.13.jpeg',
+  'WhatsApp Image 2024-12-12 at 21.51.31 - Copy.jpeg',
+  'WhatsApp Image 2024-12-12 at 21.51.39.jpeg',
+  'WhatsApp Image 2024-12-12 at 21.51.40.jpeg',
+  'WhatsApp Image 2024-12-15 at 01.20.31 - Copy.jpeg',
+  'WhatsApp Image 2024-12-15 at 01.20.31.jpeg',
+  'WhatsApp Image 2024-12-15 at 01.20.33 - Copy.jpeg',
+  'WhatsApp Image 2024-12-15 at 01.20.34 (1).jpeg',
+  'WhatsApp Image 2024-12-15 at 01.20.34.jpeg',
+]);
+
+export const trainingProjects: TrainingProject[] = [
+  {
+    slug: 'gnafe-ibms', title: 'Gnafé × IBMS', theme: 'Web & marketing digital', image: gnafeGallery[0], gallery: gnafeGallery,
+    desc: 'Un programme mené avec Gnafé pour former 45 jeunes aux compétences numériques appliquées.',
+    details: [
+      'Le parcours a accompagné 45 jeunes dans la découverte et la pratique des métiers du numérique.',
+      'Les ateliers ont porté sur la création de sites vitrines et de boutiques e-commerce, depuis la structuration des pages jusqu’à la présentation d’une activité en ligne.',
+      'Le programme a également abordé le marketing digital : présence en ligne, communication et valorisation d’une offre auprès de ses publics.',
+      'Les photos de cette page retracent les temps de formation et les moments de travail avec les participants.',
+    ],
+  },
+  {
+    slug: 'force-n-ibms', title: 'Force-n × IBMS', theme: 'Robotique', image: forcenGallery[0], gallery: forcenGallery,
+    desc: 'Un projet de formation qui fait découvrir la robotique et les technologies aux jeunes par des activités pratiques.',
+    details: [
+      'Avec Force-n, IBMS a animé un parcours d’initiation aux sciences, aux technologies et à la robotique.',
+      'Les jeunes ont été invités à explorer les notions de base, observer des démonstrations et apprendre en expérimentant en groupe.',
+      'L’approche privilégie la curiosité, la résolution de problèmes et la mise en pratique pour rendre les disciplines numériques accessibles.',
+      'La galerie rassemble les photos disponibles de cette initiative.',
+    ],
+  },
+  {
+    slug: 'jang-codage', title: 'Jang-codage', theme: 'Programmation', image: images.formation1, gallery: [images.formation1],
+    desc: 'Des cours pour apprendre à coder et à programmer, des premiers raisonnements logiques à la réalisation de petits projets.',
+    details: ['Les séances introduisent les bases de la logique informatique et de la programmation.', 'Les apprenants progressent par exercices guidés et mettent en pratique les notions en réalisant leurs premiers projets numériques.'],
+  },
+  {
+    slug: 'boot-camp-ayy-informatique', title: 'Boot Camp Numérique — Ayy Informatique', theme: 'Informatique & numérique', image: images.formation2, gallery: [images.formation2],
+    desc: 'Un parcours intensif autour de l’informatique et des compétences numériques, organisé avec Ayy Informatique.',
+    details: ['Le boot camp propose une découverte structurée des usages et outils informatiques.', 'Le format intensif favorise les exercices concrets, l’apprentissage progressif et l’entraide entre participants.'],
+  },
+  {
+    slug: 'e-jang-informatique', title: 'E-jang Informatique', theme: 'Apprentissage informatique', image: images.formation3, gallery: [images.formation3],
+    desc: 'Un projet de formation qui accompagne les apprenants dans la découverte des outils et usages informatiques.',
+    details: ['E-jang Informatique vise à rendre les compétences informatiques plus accessibles.', 'Les activités accompagnent les apprenants dans la prise en main des outils numériques et leur utilisation dans des situations concrètes.'],
+  },
+  {
+    slug: 'life-legay', title: 'Life Legay', theme: 'Formation numérique', image: images.formation4, gallery: [images.formation4],
+    desc: 'Une initiative de formation menée avec Life Legay pour contribuer au développement des compétences numériques.',
+    details: ['Cette initiative s’inscrit dans les actions de formation et de sensibilisation aux usages numériques.', 'Les informations de cette fiche pourront être précisées à partir des objectifs et du contenu détaillé du programme.'],
+  },
 ];
 
 export type FormationDetail = {

@@ -1,6 +1,7 @@
 import { ArrowRight, ArrowUpRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Reveal } from '@/components/ui/Reveal';
+import { IBMSRobot } from '@/components/3d/IBMSRobot';
 
 export function Hero() {
   return (
@@ -67,27 +68,8 @@ export function Hero() {
 
           <div className="col-span-12 lg:col-span-5">
             <Reveal delay={200}>
-              <div className="relative mx-auto min-h-[470px] max-w-[520px] md:min-h-[560px]">
-                <div className="absolute right-0 top-10 h-[390px] w-[390px] rounded-full bg-ibms-blue md:h-[470px] md:w-[470px]" />
-                <div className="absolute right-10 top-20 h-[310px] w-[310px] rounded-full border border-white/50 md:right-20 md:h-[390px] md:w-[390px]" />
-                <div className="absolute right-0 top-28 z-10 h-[320px] w-[270px] overflow-hidden rounded-[9rem_9rem_1.5rem_1.5rem] border-8 border-white shadow-2xl shadow-ibms-blue/20 md:right-10 md:h-[410px] md:w-[340px]">
-                  <img src="/assets/images/logos/img11.jpeg" alt="IBMS en action" className="h-full w-full object-cover" loading="eager" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-ibms-navy/45 to-transparent" />
-                </div>
-                <div className="absolute left-0 top-0 z-20 flex h-28 w-28 items-center justify-center rounded-full border border-ibms-ink/10 bg-white shadow-xl md:h-36 md:w-36">
-                  <img src="/assets/images/logos/pp-removebg-preview.png" alt="Logo IBMS" className="w-24 object-contain md:w-32" />
-                </div>
-                <div className="absolute bottom-4 left-2 z-20 w-44 border border-white/50 bg-ibms-navy p-4 text-white shadow-xl md:left-0">
-                  <div className="mb-3 flex items-center justify-between">
-                    <span className="label text-ibms-cyan">IBMS / 2026</span>
-                    <ArrowUpRight className="h-4 w-4 text-ibms-cyan" strokeWidth={2} />
-                  </div>
-                  <p className="text-sm font-semibold leading-snug">La technologie commence par les compétences.</p>
-                </div>
-                <div className="absolute bottom-8 right-0 z-20 hidden border-l-2 border-ibms-cyan pl-3 md:block">
-                  <span className="label text-ibms-slate">14°41′ N</span>
-                  <span className="mt-1 block label text-ibms-slate">17°26′ W</span>
-                </div>
+              <div className="mx-auto min-h-[470px] max-w-[520px] md:min-h-[560px]">
+                <IBMSRobot />
               </div>
             </Reveal>
           </div>

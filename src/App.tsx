@@ -19,6 +19,7 @@ import { Newsletter } from '@/components/sections/Newsletter';
 import { Contact } from '@/components/sections/Contact';
 import { AProposPage } from '@/pages/AProposPage';
 import { FormationsPage } from '@/pages/FormationsPage';
+import { FormationProjectDetailPage } from '@/pages/FormationProjectDetailPage';
 import { FormationDetailPage } from '@/pages/FormationDetailPage';
 import { ServicesPage } from '@/pages/ServicesPage';
 import { ServiceDetailPage } from '@/pages/ServiceDetailPage';
@@ -71,6 +72,7 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/a-propos" element={<AProposPage />} />
           <Route path="/formations" element={<FormationsPage />} />
+          <Route path="/formations/projets/:slug" element={<FormationProjectDetailPage />} />
           <Route path="/formations/:id" element={<FormationDetailPage />} />
           <Route path="/services" element={<ServicesPage />} />
           <Route path="/services/:id" element={<ServiceDetailPage />} />
