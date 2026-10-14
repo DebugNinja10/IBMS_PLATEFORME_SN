@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="64" y1="54" x2="1112" y2="780" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#092A57"/>
+      <stop offset="1" stop-color="#087CA8"/>
+    </linearGradient>
+    <linearGradient id="screen" x1="315" y1="170" x2="898" y2="600" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F5FAFF"/>
+      <stop offset="1" stop-color="#D9ECF6"/>
+    </linearGradient>
+  </defs>
+  <path fill="url(#bg)" d="M0 0h1200v800H0z"/>
+  <circle cx="1040" cy="145" r="190" fill="#29C2D4" fill-opacity=".13"/>
+  <circle cx="120" cy="725" r="245" fill="#29C2D4" fill-opacity=".1"/>
+  <rect x="260" y="145" width="680" height="470" rx="28" fill="#fff" fill-opacity=".14"/>
+  <rect x="282" y="167" width="636" height="426" rx="18" fill="url(#screen)"/>
+  <path fill="#fff" d="M282 185a18 18 0 0 1 18-18h600a18 18 0 0 1 18 18v42H282v-42Z"/>
+  <circle cx="311" cy="197" r="7" fill="#F47E73"/>
+  <circle cx="334" cy="197" r="7" fill="#F4C25F"/>
+  <circle cx="357" cy="197" r="7" fill="#58C8A5"/>
+  <rect x="317" y="260" width="146" height="282" rx="12" fill="#0B3260"/>
+  <rect x="338" y="283" width="86" height="12" rx="6" fill="#fff" fill-opacity=".9"/>
+  <rect x="338" y="319" width="100" height="8" rx="4" fill="#fff" fill-opacity=".45"/>
+  <rect x="338" y="345" width="78" height="8" rx="4" fill="#fff" fill-opacity=".45"/>
+  <rect x="338" y="371" width="92" height="8" rx="4" fill="#fff" fill-opacity=".45"/>
+  <rect x="338" y="397" width="68" height="8" rx="4" fill="#fff" fill-opacity=".45"/>
+  <rect x="488" y="260" width="400" height="112" rx="14" fill="#fff"/>
+  <rect x="513" y="282" width="112" height="9" rx="4.5" fill="#7793A8"/>
+  <rect x="513" y="307" width="160" height="22" rx="6" fill="#0B3260"/>
+  <rect x="742" y="283" width="119" height="58" rx="10" fill="#E1F6F7"/>
+  <path d="M763 315h12l9-13 12 21 12-16 9 8h24" stroke="#0E9FB1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="488" y="391" width="190" height="151" rx="14" fill="#fff"/>
+  <rect x="510" y="411" width="97" height="9" rx="4.5" fill="#7793A8"/>
+  <rect x="510" y="440" width="146" height="11" rx="5.5" fill="#D9E7EF"/>
+  <rect x="510" y="464" width="124" height="11" rx="5.5" fill="#D9E7EF"/>
+  <rect x="510" y="488" width="136" height="11" rx="5.5" fill="#D9E7EF"/>
+  <rect x="698" y="391" width="190" height="151" rx="14" fill="#fff"/>
+  <rect x="720" y="411" width="112" height="9" rx="4.5" fill="#7793A8"/>
+  <circle cx="762" cy="476" r="29" stroke="#1CA8B7" stroke-width="12"/>
+  <path d="M762 447a29 29 0 0 1 28 36" stroke="#0B3260" stroke-width="12" stroke-linecap="round"/>
+  <rect x="334" y="665" width="532" height="4" rx="2" fill="#fff" fill-opacity=".35"/>
+  <text x="600" y="725" fill="#fff" font-family="Arial, sans-serif" font-size="46" font-weight="700" text-anchor="middle">INFOSITS</text>
+  <text x="600" y="762" fill="#C7EAF4" font-family="Arial, sans-serif" font-size="20" text-anchor="middle">La gestion de l’établissement, numérisée</text>
+</svg>

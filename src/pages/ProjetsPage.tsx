@@ -39,22 +39,28 @@ export function ProjetsPage() {
 
             <div className="col-span-12 flex flex-col gap-6 md:col-span-5">
               <Reveal delay={100}>
-                <Link to={`/projets/${secondary.num}`} className="group flex min-h-[220px] items-end justify-between border border-ibms-veil bg-ibms-cream p-6 transition-all duration-500 hover:border-ibms-blue/30 hover:shadow-xl hover:shadow-ibms-blue/5 md:min-h-[260px]">
-                  <div>
-                    <div className="mb-5 flex items-center gap-3"><span className="label text-ibms-blue">{secondary.num}</span><span className="h-px w-8 bg-ibms-veil" /><span className="label text-ibms-slate">{secondary.category}</span></div>
-                    <h3 className="mb-2 text-2xl font-extrabold text-ibms-ink transition-colors group-hover:text-ibms-blue">{secondary.title}</h3>
-                    <p className="max-w-xs text-sm leading-relaxed text-ibms-slate">{secondary.desc}</p>
-                  </div>
-                  <ArrowUpRight className="h-6 w-6 shrink-0 text-ibms-slate transition-all group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:text-ibms-blue" />
-                </Link>
+                <div>
+                  <Link to={`/projets/${secondary.num}`} className="group flex min-h-[220px] items-end justify-between border border-ibms-veil bg-ibms-cream p-6 transition-all duration-500 hover:border-ibms-blue/30 hover:shadow-xl hover:shadow-ibms-blue/5 md:min-h-[260px]">
+                    <div>
+                      <div className="mb-5 flex items-center gap-3"><span className="label text-ibms-blue">{secondary.num}</span><span className="h-px w-8 bg-ibms-veil" /><span className="label text-ibms-slate">{secondary.category}</span></div>
+                      <h3 className="mb-2 text-2xl font-extrabold text-ibms-ink transition-colors group-hover:text-ibms-blue">{secondary.title}</h3>
+                      <p className="max-w-xs text-sm leading-relaxed text-ibms-slate">{secondary.desc}</p>
+                    </div>
+                    <ArrowUpRight className="h-6 w-6 shrink-0 text-ibms-slate transition-all group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:text-ibms-blue" />
+                  </Link>
+                  {secondary.url && <a href={secondary.url} target="_blank" rel="noopener noreferrer" className="mt-3 inline-flex items-center gap-2 text-sm font-bold text-ibms-blue transition-colors hover:text-ibms-cyan">Accéder au site de {secondary.title} <ArrowUpRight className="h-4 w-4" /></a>}
+                </div>
               </Reveal>
               {rest.map((project, index) => (
                 <Reveal key={project.num} delay={180 + index * 80}>
-                  <Link to={`/projets/${project.num}`} className="group flex items-center gap-5 border-t border-ibms-ink/15 py-5">
-                    <span className="label text-ibms-slate transition-colors group-hover:text-ibms-blue">{project.num}</span>
-                    <div className="flex-1"><div className="mb-1 label text-ibms-slate">{project.category} / {project.status}</div><h3 className="text-lg font-bold text-ibms-ink transition-colors group-hover:text-ibms-blue">{project.title}</h3></div>
-                    <ArrowUpRight className="h-5 w-5 text-ibms-slate transition-all group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:text-ibms-blue" />
-                  </Link>
+                  <div className="border-t border-ibms-ink/15 py-5">
+                    <Link to={`/projets/${project.num}`} className="group flex items-center gap-5">
+                      <span className="label text-ibms-slate transition-colors group-hover:text-ibms-blue">{project.num}</span>
+                      <div className="flex-1"><div className="mb-1 label text-ibms-slate">{project.category} / {project.status}</div><h3 className="text-lg font-bold text-ibms-ink transition-colors group-hover:text-ibms-blue">{project.title}</h3></div>
+                      <ArrowUpRight className="h-5 w-5 text-ibms-slate transition-all group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:text-ibms-blue" />
+                    </Link>
+                    {project.url && <a href={project.url} target="_blank" rel="noopener noreferrer" className="ml-12 mt-2 inline-flex items-center gap-1.5 text-sm font-bold text-ibms-blue transition-colors hover:text-ibms-cyan">Accéder au site <ArrowUpRight className="h-3.5 w-3.5" /></a>}
+                  </div>
                 </Reveal>
               ))}
             </div>

@@ -27,8 +27,9 @@ export function Hero() {
             </Reveal>
 
             <Reveal delay={100}>
+              <p className="mb-3 label text-ibms-cyan">Une entreprise informatique</p>
               <h1 className="max-w-4xl text-hero font-serif font-normal tracking-normal text-white">
-                Maitrisez le numérique{' '}
+                Maîtrisez le numérique{' '}
                 <span className="relative inline-block text-ibms-cyan">
                   avec IBMS.
                   <span className="absolute -bottom-2 left-0 h-1 w-2/3 bg-ibms-cyan" />

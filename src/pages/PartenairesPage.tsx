@@ -6,7 +6,7 @@ import { partners, supportReasons } from '@/data/site';
 export function PartenairesPage() {
   const marquee = [...partners, ...partners];
   return (
-    <PageLayout num="09" label="Partenaires" title={<>Ils nous <span className="text-ibms-cyan">font confiance.</span></>} intro="Institutions publiques, incubateurs, universités, entreprises tech et startups qui soutiennent l'écosystème IBMS.">
+    <PageLayout num="09" label="Partenaires" title={<>Ils nous <span className="text-ibms-cyan">font confiance.</span></>} intro="Organisations publiques, incubateurs, universités, entreprises tech et startups qui soutiennent l'écosystème IBMS.">
       <section className="section-pad bg-white overflow-hidden">
         <div className="container-ibms mb-10">
           <Reveal><div className="flex items-center gap-3"><span className="label text-ibms-blue">Nos partenaires</span><span className="h-px w-12 bg-ibms-blue" /></div></Reveal>

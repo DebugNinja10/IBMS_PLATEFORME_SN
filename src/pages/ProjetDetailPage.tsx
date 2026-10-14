@@ -62,10 +62,18 @@ export function ProjetDetailPage() {
                 </div>
               </Reveal>
               <Reveal delay={300}>
-                <Link to="/contact" className="btn-primary">
-                  Discuter d'un projet similaire
-                  <ArrowRight className="h-4 w-4" />
-                </Link>
+                <div className="flex flex-wrap gap-3">
+                  {project.url && (
+                    <a href={project.url} target="_blank" rel="noopener noreferrer" className="btn-primary">
+                      Accéder à la plateforme
+                      <ArrowRight className="h-4 w-4" />
+                    </a>
+                  )}
+                  <Link to="/contact" className="inline-flex items-center gap-2 rounded-xl border border-ibms-veil px-5 py-3 text-sm font-bold text-ibms-blue transition-colors hover:border-ibms-blue/30 hover:bg-ibms-light">
+                    Discuter d'un projet similaire
+                    <ArrowRight className="h-4 w-4" />
+                  </Link>
+                </div>
               </Reveal>
             </div>
 

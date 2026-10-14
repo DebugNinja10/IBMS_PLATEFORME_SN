@@ -48,7 +48,7 @@ export const navItems: NavItem[] = [
       { label: 'Notre vision', num: '03', desc: "Faire de la compétence un moteur d'innovation.", path: '/a-propos' },
       { label: 'Notre mission', num: '04', desc: 'Former, accompagner, innover, transformer.', path: '/a-propos' },
       { label: 'Nos valeurs', num: '05', desc: 'Les principes qui guident chaque action.', path: '/a-propos' },
-      { label: 'Notre équipe', num: '06', desc: "Les personnes derrière l'institution.", path: '/equipe' },
+      { label: 'Notre équipe', num: '06', desc: "Les personnes derrière l'entreprise.", path: '/equipe' },
     ],
   },
   {
@@ -90,7 +90,7 @@ export const navItems: NavItem[] = [
       { label: 'Blog', num: '01', desc: "Articles et réflexions de l'équipe IBMS.", path: '/blog' },
       { label: 'Guides', num: '02', desc: 'Ressources pédagogiques détaillées.', path: '/guides' },
       { label: 'Événements', num: '03', desc: 'Formations, workshops et conférences.', path: '/evenements' },
-      { label: 'Actualités', num: '04', desc: "Les dernières nouvelles de l'institution.", path: '/blog' },
+      { label: 'Actualités', num: '04', desc: "Les dernières nouvelles de l'entreprise.", path: '/blog' },
     ],
   },
   {
@@ -519,24 +519,27 @@ export const projects: Project[] = [
     ],
   },
   {
-    num: '08',
-    title: 'Incubateur des entrepreneurs sociaux',
-    category: 'Entrepreneuriat social',
-    status: 'Site en ligne',
-    desc: 'Une plateforme consacrée à l’entrepreneuriat social et à l’accompagnement des initiatives.',
-    tech: ['Web', 'JavaScript', 'Vercel'],
-    result: 'Site de présentation de l’incubateur',
-    image: '/assets/images/projects/incubateur-social.svg',
-    url: 'https://incubateurdesentreprneurssociaux.vercel.app/',
-    challenge: 'Présenter l’incubateur et rendre ses informations accessibles aux porteurs de projets.',
+    num: '09',
+    title: 'Infosits',
+    category: 'Éducation & Gestion scolaire',
+    status: 'Plateforme en ligne',
+    desc: 'Une plateforme de gestion intégrée qui numérise le fonctionnement de l’établissement : suivi des étudiants, gestion du personnel et organisation des activités scolaires depuis un même espace.',
+    tech: ['Gestion scolaire', 'Suivi des étudiants', 'Gestion du personnel', 'Numérisation'],
+    result: 'Gestion centralisée et numérisée de l’établissement',
+    image: '/assets/images/projects/infosits.svg',
+    url: 'https://campus-infosit.vercel.app/',
+    challenge: 'La gestion d’un établissement mobilise de nombreuses informations liées aux étudiants, au personnel et aux activités quotidiennes. Infosits propose de réunir ces processus dans une plateforme numérique pour faciliter leur suivi et leur organisation.',
     solution: [
-      'Création d’un espace numérique consacré à l’incubateur.',
-      'Organisation des informations relatives à sa mission.',
-      'Mise à disposition du site en ligne.'
+      'Centralisation de la gestion de l’établissement dans une plateforme accessible en ligne.',
+      'Numérisation du suivi des étudiants et des informations qui les concernent.',
+      'Prise en charge de la gestion du personnel et des opérations administratives associées.',
+      'Organisation des activités de l’établissement au sein d’un même environnement numérique.'
     ],
     impact: [
-      'Une présence numérique dédiée à l’entrepreneuriat social.',
-      'Un accès en ligne aux informations de l’incubateur.'
+      'Les informations de l’établissement sont réunies dans un espace numérique.',
+      'Le suivi des étudiants et du personnel est intégré à la gestion globale.',
+      'La plateforme accompagne la numérisation des opérations de l’établissement.',
+      'Accès à la plateforme Infosits depuis le lien dédié.'
     ],
   },
 ];
@@ -560,7 +563,7 @@ export const team: TeamMember[] = [
     name: 'Mohamed Ndiaye',
     role: 'CEO de IBMS',
     image: images.team1,
-    bio: 'Mohamed Ndiaye pilote la vision stratégique d’IBMS et accompagne le développement de l’institution autour de la formation, de l’innovation et de l’accompagnement des talents.',
+    bio: 'Mohamed Ndiaye pilote la vision stratégique d’IBMS et accompagne le développement de l’entreprise autour de l’informatique, de la formation et de l’innovation numérique.',
     expertise: ['Leadership', 'Stratégie', 'Innovation'],
     email: 'contact@ibms.sn',
     linkedin: 'https://www.linkedin.com',
@@ -730,7 +733,7 @@ export type Testimonial = {
 
 export const testimonials: Testimonial[] = [
   { name: 'Oumar Sy', role: 'Développeur web — Ancien apprenant', text: "IBMS m'a permis d'acquérir les compétences techniques nécessaires pour évoluer professionnellement. Aujourd'hui je travaille en tant que développeur full-stack dans une entreprise de Dakar." },
-  { name: 'Mariama Touré', role: 'Directrice — Partenaire institutionnel', text: "Un accompagnement de qualité qui a véritablement accéléré notre transformation digitale. L'équipe IBMS comprend les réalités du terrain et s'adapte à nos besoins." },
+  { name: 'Mariama Touré', role: 'Directrice — Partenaire d’IBMS', text: "Un accompagnement de qualité qui a véritablement accéléré notre transformation digitale. L'équipe IBMS comprend les réalités du terrain et s'adapte à nos besoins." },
   { name: 'Ibrahima Gueye', role: 'CTO — Entreprise partenaire', text: "Les profils formés par IBMS répondent précisément à nos besoins en compétences numériques. C'est un vivier de talents précieux pour notre écosystème." },
 ];
 
@@ -745,7 +748,7 @@ export const supportReasons: SupportReason[] = [
   { num: '02', title: 'Développer les talents locaux', desc: "Votre soutien permet de former les jeunes et les professionnels aux compétences de demain." },
   { num: '03', title: "Stimuler l'innovation locale", desc: "Vous aidez à faire émerger des projets et prototypes à fort impact socio-économique." },
   { num: '04', title: 'Promouvoir une IA éthique', desc: "Vous participez à la mise en place de cadres responsables pour encadrer les usages." },
-  { num: '05', title: 'Gagner en visibilité', desc: "Les partenaires d'IBMS bénéficient d'une visibilité institutionnelle et d'un réseau national." },
+  { num: '05', title: 'Gagner en visibilité', desc: "Les partenaires d'IBMS bénéficient d'une visibilité professionnelle et d'un réseau national." },
 ];
 
 export type FAQItem = {

@@ -13,7 +13,7 @@ export function Partners() {
               Ils nous <span className="text-gradient">font confiance.</span>
             </h2>
             <p className="mt-4 text-base text-ibms-slate max-w-xl mx-auto">
-              Institutions publiques, incubateurs, universités, entreprises tech et startups.
+              Organisations publiques, incubateurs, universités, entreprises tech et startups.
             </p>
           </div>
         </Reveal>
