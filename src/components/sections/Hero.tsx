@@ -27,8 +27,8 @@ export function Hero() {
       </div>
 
       <div className="container-ibms relative">
-        <div className="grid grid-cols-12 gap-6 lg:gap-12">
-          <div className="col-span-12 lg:col-span-7 lg:pt-10">
+        <div className="grid grid-cols-12 gap-6 lg:gap-8">
+          <div className="col-span-12 lg:col-span-8 lg:pt-10">
             <Reveal>
               <div className="mb-7 flex items-center gap-3">
                 <span className="h-2 w-2 rounded-full bg-ibms-cyan" />
@@ -66,33 +66,39 @@ export function Hero() {
             </Reveal>
 
             <Reveal delay={300}>
-              <div className="mt-8 flex flex-wrap items-center gap-3">
-                <Link to="/formations" className="btn-primary">
-                  Découvrir nos formations
-                  <ArrowRight className="h-4 w-4" strokeWidth={2} />
-                </Link>
-
+              <div className="mt-8 flex flex-nowrap items-center gap-1.5 overflow-x-auto pb-2">
                 <Link
-                  to="/solutions-digitales"
-                  className="btn-ghost inline-flex items-center gap-2 border-2 border-ibms-blue bg-ibms-blue text-white transition-colors hover:border-ibms-cyan hover:bg-ibms-cyan hover:text-white"
+                  to="/formations"
+                  className="btn-primary inline-flex shrink-0 items-center gap-1 whitespace-nowrap px-3 text-xs"
                 >
-                  <MonitorSmartphone className="h-4 w-4" />
-                  Solutions digitales
-                  <ArrowUpRight className="h-4 w-4" />
+                  Découvrir nos formations
+                  <ArrowRight className="h-3.5 w-3.5 shrink-0 text-white" strokeWidth={2} />
                 </Link>
 
                 <Link
                   to="/intelligence-artificielle"
-                  className="btn-ghost inline-flex items-center gap-2 border-2 border-ibms-blue bg-ibms-blue text-white transition-colors hover:border-ibms-cyan hover:bg-ibms-cyan hover:text-white"
+                  className="btn-ghost inline-flex shrink-0 items-center gap-1 whitespace-nowrap border-2 border-ibms-blue bg-ibms-blue px-2 text-xs text-white transition-colors hover:border-ibms-cyan hover:bg-ibms-cyan"
                 >
-                  <BrainCircuit className="h-4 w-4" />
+                  <BrainCircuit className="h-3.5 w-3.5 shrink-0" />
                   Intelligence artificielle
-                  <ArrowUpRight className="h-4 w-4" />
+                  <ArrowUpRight className="h-3.5 w-3.5 shrink-0" />
                 </Link>
 
-                <Link to="/a-propos" className="btn-ghost text-white">
+                <Link
+                  to="/solutions-digitales"
+                  className="btn-ghost inline-flex shrink-0 items-center gap-1 whitespace-nowrap border-2 border-ibms-blue bg-ibms-blue px-2 text-xs text-white transition-colors hover:border-ibms-cyan hover:bg-ibms-cyan"
+                >
+                  <MonitorSmartphone className="h-3.5 w-3.5 shrink-0" />
+                  Solutions digitales
+                  <ArrowUpRight className="h-3.5 w-3.5 shrink-0" />
+                </Link>
+
+                <Link
+                  to="/a-propos"
+                  className="btn-ghost inline-flex shrink-0 items-center gap-1 whitespace-nowrap px-2 text-xs text-white"
+                >
                   Découvrir IBMS
-                  <ArrowUpRight className="h-4 w-4" strokeWidth={2} />
+                  <ArrowUpRight className="h-3.5 w-3.5 shrink-0 text-white" strokeWidth={2} />
                 </Link>
               </div>
             </Reveal>
@@ -108,7 +114,7 @@ export function Hero() {
             </Reveal>
           </div>
 
-          <div className="col-span-12 lg:col-span-5">
+          <div className="col-span-12 lg:col-span-4">
             <Reveal delay={200}>
               <div className="mx-auto min-h-[470px] max-w-[520px] md:min-h-[560px]">
                 <IBMSRobot />
