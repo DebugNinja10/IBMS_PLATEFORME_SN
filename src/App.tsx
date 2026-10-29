@@ -18,6 +18,8 @@ import { Partners } from '@/components/sections/Partners';
 import { Newsletter } from '@/components/sections/Newsletter';
 import { Contact } from '@/components/sections/Contact';
 import { AProposPage } from '@/pages/AProposPage';
+import { SolutionsDigitalesPage } from '@/pages/SolutionsDigitalesPage';
+import { IntelligenceArtificiellePage } from '@/pages/IntelligenceArtificiellePage';
 import { FormationsPage } from '@/pages/FormationsPage';
 import { FormationProjectDetailPage } from '@/pages/FormationProjectDetailPage';
 import { FormationDetailPage } from '@/pages/FormationDetailPage';
@@ -71,6 +73,8 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/a-propos" element={<AProposPage />} />
+          <Route path="/solutions-digitales" element={<SolutionsDigitalesPage />} />
+          <Route path="/intelligence-artificielle" element={<IntelligenceArtificiellePage />} />
           <Route path="/formations" element={<FormationsPage />} />
           <Route path="/formations/projets/:slug" element={<FormationProjectDetailPage />} />
           <Route path="/formations/:id" element={<FormationDetailPage />} />
