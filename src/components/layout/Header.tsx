@@ -1,3 +1,4 @@
+
 import { useEffect, useRef, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { ChevronDown, Menu, X, Plus, ArrowRight, Search } from 'lucide-react';
@@ -25,7 +26,9 @@ export function Header() {
 
   useEffect(() => {
     document.body.style.overflow = mobileOpen ? 'hidden' : '';
-    return () => { document.body.style.overflow = ''; };
+    return () => {
+      document.body.style.overflow = '';
+    };
   }, [mobileOpen]);
 
   useEffect(() => {
@@ -117,6 +120,7 @@ export function Header() {
               <Link to="/recherche" className="p-2 text-ibms-ink/70 transition-colors hover:text-ibms-blue" aria-label="Rechercher">
                 <Search className="h-5 w-5" strokeWidth={2} />
               </Link>
+
               <a
                 href="https://form.jotform.com/261413065241042"
                 target="_blank"
@@ -125,8 +129,9 @@ export function Header() {
               >
                 Choisir une formation
               </a>
+
               <Link to="/contact" className="btn-primary">
-                Nous contacter
+                Guide
               </Link>
             </div>
 
@@ -187,6 +192,7 @@ export function Header() {
                   />
                 )}
               </button>
+
               {item.children && mobileSubmenu === item.label && (
                 <div className="pb-4 pl-12 space-y-3">
                   {item.children.map((child) => (
@@ -204,13 +210,14 @@ export function Header() {
               )}
             </div>
           ))}
+
           <Link to="/recherche" className="flex items-center gap-3 py-4 text-ibms-slate hover:text-ibms-blue transition-colors duration-300" onClick={() => setMobileOpen(false)}>
             <Search className="h-5 w-5" />
             <span className="text-base font-semibold">Rechercher</span>
           </Link>
-          
+
           <Link to="/contact" className="btn-primary mt-4 w-full justify-center" onClick={() => setMobileOpen(false)}>
-            Nous contacter
+            Guide
           </Link>
         </nav>
       </div>
