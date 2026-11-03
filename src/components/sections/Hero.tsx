@@ -1,4 +1,4 @@
-
+﻿
 import {
   ArrowRight,
   ArrowUpRight,
@@ -34,18 +34,18 @@ export function Hero() {
               <div className="mb-7 flex items-center gap-3">
                 <span className="h-2 w-2 rounded-full bg-ibms-cyan" />
                 <span className="label text-ibms-cyan">
-                  Formation / Innovation / Solutions numériques
+                  Formation / Innovation / Solutions numÃ©riques
                 </span>
                 <span className="hidden h-px w-16 bg-ibms-veil sm:block" />
                 <span className="hidden text-[10px] font-bold uppercase tracking-widest text-ibms-slate sm:block">
-                  Thiès / SN
+                  ThiÃ¨s / SN
                 </span>
               </div>
             </Reveal>
 
             <Reveal delay={100}>
               <h1 className="max-w-4xl text-hero font-serif font-normal tracking-normal text-white">
-                Maîtrisez le numérique{' '}
+                MaÃ®trisez le numÃ©rique{' '}
                 <span className="relative inline-block text-ibms-cyan">
                   avec IBMS.
                   <span className="absolute -bottom-2 left-0 h-1 w-2/3 bg-ibms-cyan" />
@@ -57,48 +57,12 @@ export function Hero() {
               <p className="mt-7 max-w-xl text-lg leading-relaxed text-white/70">
                 IBMS accompagne les jeunes, les professionnels, les
                 entrepreneurs et les organisations dans leur transformation
-                numérique à travers la formation, l’innovation et la conception
-                de solutions digitales adaptées aux besoins réels.
+                numÃ©rique Ã  travers la formation, lâ€™innovation et la conception
+                de solutions digitales adaptÃ©es aux besoins rÃ©els.
               </p>
             </Reveal>
 
-            <Reveal delay={300}>
-              <div className="mt-8 flex flex-wrap items-center gap-2">
-                <Link
-                  to="/formations"
-                  className="btn-primary inline-flex items-center gap-1 px-3 text-xs"
-                >
-                  Découvrir nos formations
-                  <ArrowRight className="h-3.5 w-3.5 text-white" strokeWidth={2} />
-                </Link>
-
-                <Link
-                  to="/intelligence-artificielle"
-                  className="btn-ghost inline-flex items-center gap-1 border-2 border-ibms-blue bg-ibms-blue px-2 text-xs text-white transition-colors hover:border-ibms-cyan hover:bg-ibms-cyan"
-                >
-                  <BrainCircuit className="h-3.5 w-3.5" />
-                  Intelligence artificielle
-                  <ArrowUpRight className="h-3.5 w-3.5" />
-                </Link>
-
-                <Link
-                  to="/solutions-digitales"
-                  className="btn-ghost inline-flex items-center gap-1 border-2 border-ibms-blue bg-ibms-blue px-2 text-xs text-white transition-colors hover:border-ibms-cyan hover:bg-ibms-cyan"
-                >
-                  <MonitorSmartphone className="h-3.5 w-3.5" />
-                  Solutions digitales
-                  <ArrowUpRight className="h-3.5 w-3.5" />
-                </Link>
-
-                <Link
-                  to="/a-propos"
-                  className="btn-ghost inline-flex items-center gap-1 px-2 text-xs text-white"
-                >
-                  Découvrir IBMS
-                  <ArrowUpRight className="h-3.5 w-3.5 text-white" strokeWidth={2} />
-                </Link>
-              </div>
-            </Reveal>
+            <IBMSChatbot />
 
             <Reveal delay={400}>
               <div className="mt-14 flex items-center gap-5 border-t border-white/20 pt-5">
@@ -110,7 +74,7 @@ export function Hero() {
               </div>
             </Reveal>
 
-            <IBMSChatbot />
+            
           </div>
 
           <div className="col-span-12 lg:col-span-4">
