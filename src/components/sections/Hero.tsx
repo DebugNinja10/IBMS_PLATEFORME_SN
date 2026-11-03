@@ -8,6 +8,7 @@ import {
 import { Link } from 'react-router-dom';
 import { Reveal } from '@/components/ui/Reveal';
 import { IBMSRobot } from '@/components/3d/IBMSRobot';
+import { IBMSChatbot } from '@/components/sections/IBMSChatbot';
 
 export function Hero() {
   return (
@@ -29,23 +30,7 @@ export function Hero() {
       <div className="container-ibms relative">
         <div className="grid grid-cols-12 gap-6 lg:gap-12">
           <div className="col-span-12 lg:col-span-7 lg:pt-10">
-            <Reveal>
-              <div className="mb-7 flex items-center gap-3">
-                <span className="h-2 w-2 rounded-full bg-ibms-cyan" />
-                <span className="label text-ibms-cyan">
-                  Formation / Innovation / Solutions numériques
-                </span>
-                <span className="hidden h-px w-16 bg-ibms-veil sm:block" />
-                <span className="hidden text-[10px] font-bold uppercase tracking-widest text-ibms-slate sm:block">
-                  Thiès / SN
-                </span>
-              </div>
-            </Reveal>
-
             <Reveal delay={100}>
-              <p className="mb-3 label text-ibms-cyan">
-                Une entreprise informatique
-              </p>
 
               <h1 className="max-w-4xl text-hero font-serif font-normal tracking-normal text-white">
                 Maîtrisez le numérique{' '}
@@ -60,52 +45,14 @@ export function Hero() {
               <p className="mt-7 max-w-xl text-lg leading-relaxed text-white/70">
                 IBMS accompagne les jeunes, les professionnels, les
                 entrepreneurs et les organisations dans leur transformation
-                numérique à travers la formation, l’innovation et la conception
-                de solutions digitales adaptées aux besoins réels.
+                numÃ©rique Ã  travers la formation, lâ€™innovation et la conception
+                de solutions digitales adaptÃ©es aux besoins rÃ©els.
               </p>
             </Reveal>
 
-            <Reveal delay={300}>
-              <div className="mt-8 flex flex-wrap items-center gap-3">
-                <Link to="/formations" className="btn-primary">
-                  Découvrir nos formations
-                  <ArrowRight className="h-4 w-4" strokeWidth={2} />
-                </Link>
+            <IBMSChatbot />
 
-                <Link
-                  to="/solutions-digitales"
-                  className="btn-ghost inline-flex items-center gap-2 border-2 border-ibms-blue bg-ibms-blue text-white transition-colors hover:border-ibms-cyan hover:bg-ibms-cyan hover:text-white"
-                >
-                  <MonitorSmartphone className="h-4 w-4" />
-                  Solutions digitales
-                  <ArrowUpRight className="h-4 w-4" />
-                </Link>
-
-                <Link
-                  to="/intelligence-artificielle"
-                  className="btn-ghost inline-flex items-center gap-2 border-2 border-ibms-blue bg-ibms-blue text-white transition-colors hover:border-ibms-cyan hover:bg-ibms-cyan hover:text-white"
-                >
-                  <BrainCircuit className="h-4 w-4" />
-                  Intelligence artificielle
-                  <ArrowUpRight className="h-4 w-4" />
-                </Link>
-
-                <Link to="/a-propos" className="btn-ghost text-white">
-                  Découvrir IBMS
-                  <ArrowUpRight className="h-4 w-4" strokeWidth={2} />
-                </Link>
-              </div>
-            </Reveal>
-
-            <Reveal delay={400}>
-              <div className="mt-14 flex items-center gap-5 border-t border-white/20 pt-5">
-                <span className="label text-white/60">01</span>
-                <span className="h-px w-14 bg-ibms-blue" />
-                <span className="text-xs font-semibold text-white/60">
-                  Formation / Innovation / Impact
-                </span>
-              </div>
-            </Reveal>
+            
           </div>
 
           <div className="col-span-12 lg:col-span-5">
@@ -120,3 +67,5 @@ export function Hero() {
     </section>
   );
 }
+
+

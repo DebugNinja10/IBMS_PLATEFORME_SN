@@ -3,6 +3,7 @@ import { MessageCircle } from 'lucide-react';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { Hero } from '@/components/sections/Hero';
+import { ExploreIBMS } from '@/components/sections/ExploreIBMS';
 import { Vision } from '@/components/sections/Vision';
 import { Mission } from '@/components/sections/Mission';
 import { KeyFigures } from '@/components/sections/KeyFigures';
@@ -47,6 +48,7 @@ function HomePage() {
   return (
     <>
       <Hero />
+      <ExploreIBMS />
       <Vision />
       <Mission />
       <KeyFigures />
