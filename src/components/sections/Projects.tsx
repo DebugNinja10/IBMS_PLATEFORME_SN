@@ -5,45 +5,147 @@ import { Link } from 'react-router-dom';
 import { projects } from '@/data/site';
 
 export function Projects() {
-  const [main, secondary, ...rest] = projects;
+  const featuredProjects = projects.slice(0, 3);
 
   return (
-    <section id="projets" className="section-pad bg-ibms-cream">
+    <section id="projets" className="section-pad overflow-hidden bg-ibms-cream">
       <div className="container-ibms">
-        <div className="mb-12 grid grid-cols-12 gap-6">
-          <div className="col-span-12 md:col-span-8"><Reveal><div className="mb-4 flex items-center gap-3"><span className="label text-ibms-blue">06</span><span className="h-px w-12 bg-ibms-blue" /><span className="label text-ibms-slate">Projets & initiatives</span></div><h2 className="text-section-title font-extrabold text-ibms-ink">Des idées qui deviennent des <span className="text-gradient">réalisations.</span></h2></Reveal></div>
-          <div className="col-span-12 flex items-end md:col-span-4 md:justify-end"><Reveal delay={150}><ArrowLink to="/projets" variant="blue">Explorer nos projets</ArrowLink></Reveal></div>
-        </div>
 
-        <div className="grid grid-cols-12 gap-6 lg:gap-8">
-          <Reveal className="group col-span-12 md:col-span-7">
-            <Link to={`/projets/${main.num}`} className="group relative block min-h-[430px] overflow-hidden bg-ibms-navy text-white md:min-h-[540px]">
-              <img src={main.image} alt={main.title} className="absolute inset-0 h-full w-full object-cover opacity-60 transition-transform duration-700 ease-ibms group-hover:scale-105" loading="lazy" />
-              <div className="absolute inset-0 bg-gradient-to-t from-ibms-navy via-ibms-navy/40 to-transparent" />
-              <div className="relative flex min-h-[430px] flex-col justify-between p-7 md:min-h-[540px] md:p-10">
-                <div className="flex items-center justify-between"><span className="label text-ibms-cyan">Projet principal / {main.status}</span><span className="flex h-10 w-10 items-center justify-center rounded-full border border-white/30 transition-colors group-hover:border-ibms-cyan group-hover:text-ibms-cyan"><ArrowUpRight className="h-5 w-5" /></span></div>
-                <div><div className="mb-3 flex items-center gap-3"><span className="label text-white/70">{main.num}</span><span className="h-px w-8 bg-white/40" /><span className="label text-white/70">{main.category}</span></div><h3 className="mb-4 text-3xl font-extrabold transition-colors duration-300 group-hover:text-ibms-cyan md:text-5xl">{main.title}</h3><p className="max-w-lg text-sm leading-relaxed text-white/70">{main.desc}</p><div className="mt-5 flex flex-wrap gap-2">{main.tech.map((tech) => <span key={tech} className="rounded-full border border-white/20 px-3 py-1 text-xs text-white/70">{tech}</span>)}</div></div>
+        {/* EN-TETE */}
+        <div className="mb-12 flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+          <div className="max-w-3xl">
+            <Reveal>
+              <div className="mb-4 flex items-center gap-3">
+                <span className="label text-ibms-blue">06</span>
+                <span className="h-px w-12 bg-ibms-blue" />
+                <span className="label text-ibms-slate">
+                  Projets & initiatives
+                </span>
               </div>
-            </Link>
-          </Reveal>
 
-          <div className="col-span-12 flex flex-col gap-6 md:col-span-5">
-            <Reveal delay={100}>
-              <Link to={`/projets/${secondary.num}`} className="group flex min-h-[220px] items-end justify-between border border-ibms-veil bg-white p-6 transition-all duration-500 hover:border-ibms-blue/30 hover:shadow-xl hover:shadow-ibms-blue/5 md:min-h-[260px]">
-                <div><div className="mb-5 flex items-center gap-3"><span className="label text-ibms-blue">{secondary.num}</span><span className="h-px w-8 bg-ibms-veil" /><span className="label text-ibms-slate">{secondary.category}</span></div><h3 className="mb-2 text-2xl font-extrabold text-ibms-ink transition-colors group-hover:text-ibms-blue">{secondary.title}</h3><p className="max-w-xs text-sm leading-relaxed text-ibms-slate">{secondary.desc}</p></div><ArrowUpRight className="h-6 w-6 shrink-0 text-ibms-slate transition-all group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:text-ibms-blue" />
-              </Link>
+              <h2 className="text-section-title font-extrabold text-ibms-ink">
+                Des idées qui deviennent des{' '}
+                <span className="text-gradient">réalisations.</span>
+              </h2>
+
+              <p className="mt-4 max-w-2xl text-sm leading-7 text-ibms-slate md:text-base">
+                Découvrez nos réalisations et les solutions numériques que
+                nous développons pour répondre aux défis de notre environnement.
+              </p>
             </Reveal>
-            {rest.map((project, index) => (
-              <Reveal key={project.num} delay={180 + index * 80}>
-                <Link to={`/projets/${project.num}`} className="group flex items-center gap-5 border-t border-ibms-ink/15 py-5">
-                  <span className="label text-ibms-slate transition-colors group-hover:text-ibms-blue">{project.num}</span>
-                  <div className="flex-1"><div className="mb-1 label text-ibms-slate">{project.category} / {project.status}</div><h3 className="text-lg font-bold text-ibms-ink transition-colors group-hover:text-ibms-blue">{project.title}</h3></div>
-                  <ArrowUpRight className="h-5 w-5 text-ibms-slate transition-all group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:text-ibms-blue" />
-                </Link>
-              </Reveal>
-            ))}
           </div>
+
+          <Reveal delay={150}>
+            <ArrowLink to="/projets" variant="blue">
+              Explorer tous nos projets
+            </ArrowLink>
+          </Reveal>
         </div>
+
+        {/* GALERIE */}
+        <div className="grid grid-cols-1 gap-7 sm:grid-cols-2 lg:grid-cols-3 lg:gap-8">
+          {featuredProjects.map((project, index) => (
+            <Reveal key={project.num} delay={index * 100}>
+              <article className="group flex h-full flex-col overflow-hidden rounded-3xl border border-ibms-veil bg-white shadow-sm transition-all duration-500 hover:-translate-y-2 hover:border-ibms-blue/30 hover:shadow-xl hover:shadow-ibms-navy/10">
+
+                {/* IMAGE */}
+                <Link
+                  to={`/projets/${project.num}`}
+                  aria-label={`Découvrir le projet ${project.title}`}
+                  className="relative block aspect-[16/10] overflow-hidden bg-white"
+                >
+                  <div className="absolute inset-0 bg-gradient-to-br from-ibms-cream via-white to-ibms-light" />
+
+                  <img
+                    src={project.image}
+                    alt={`Illustration du projet ${project.title}`}
+                    loading="lazy"
+                    className="relative z-10 h-full w-full object-contain p-5 transition-transform duration-700 ease-ibms group-hover:scale-105 sm:p-7"
+                  />
+
+                  <span className="absolute left-4 top-4 z-20 rounded-full border border-white/70 bg-white/90 px-3 py-1.5 text-[10px] font-extrabold uppercase tracking-wider text-ibms-navy shadow-sm backdrop-blur">
+                    {project.category}
+                  </span>
+
+                  <span className="absolute right-4 top-4 z-20 flex h-10 w-10 items-center justify-center rounded-full bg-ibms-navy text-white shadow-lg transition-all duration-300 group-hover:rotate-45 group-hover:bg-ibms-cyan">
+                    <ArrowUpRight className="h-5 w-5" />
+                  </span>
+
+                  <span className="absolute bottom-4 left-4 z-20 rounded-full bg-white/90 px-3 py-1 text-xs font-bold text-ibms-navy backdrop-blur">
+                    Projet {project.num}
+                  </span>
+                </Link>
+
+                {/* INFORMATIONS */}
+                <div className="flex flex-1 flex-col p-5 sm:p-6">
+
+                  <div className="mb-4 flex items-center justify-between gap-3">
+                    <span className="text-[10px] font-extrabold uppercase tracking-[0.15em] text-ibms-blue">
+                      {project.category}
+                    </span>
+
+                    <span className="rounded-full bg-ibms-light px-3 py-1 text-[10px] font-bold uppercase tracking-wide text-ibms-slate">
+                      {project.status}
+                    </span>
+                  </div>
+
+                  <Link to={`/projets/${project.num}`}>
+                    <h3 className="mb-3 text-xl font-extrabold leading-snug text-ibms-ink transition-colors duration-300 group-hover:text-ibms-blue">
+                      {project.title}
+                    </h3>
+                  </Link>
+
+                  <p className="mb-5 flex-1 text-sm leading-7 text-ibms-slate">
+                    {project.desc}
+                  </p>
+
+                  {/* TECHNOLOGIES */}
+                  <div className="mb-5 flex flex-wrap gap-2">
+                    {project.tech.slice(0, 3).map((tech) => (
+                      <span
+                        key={tech}
+                        className="rounded-lg border border-ibms-veil bg-ibms-cream px-3 py-1.5 text-[10px] font-bold text-ibms-slate"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+
+                    {project.tech.length > 3 && (
+                      <span className="rounded-lg bg-ibms-light px-3 py-1.5 text-[10px] font-bold text-ibms-blue">
+                        +{project.tech.length - 3}
+                      </span>
+                    )}
+                  </div>
+
+                  {/* LIEN */}
+                  <div className="mt-auto border-t border-ibms-veil pt-4">
+                    <Link
+                      to={`/projets/${project.num}`}
+                      className="inline-flex items-center gap-2 text-sm font-extrabold text-ibms-blue transition-all hover:gap-3 hover:text-ibms-cyan"
+                    >
+                      Découvrir le projet
+                      <ArrowUpRight className="h-4 w-4" />
+                    </Link>
+                  </div>
+                </div>
+              </article>
+            </Reveal>
+          ))}
+        </div>
+
+        {/* LIEN VERS LA GALERIE COMPLETE */}
+        <Reveal delay={250}>
+          <div className="mt-10 flex justify-center">
+            <Link
+              to="/projets"
+              className="inline-flex items-center gap-3 rounded-full border border-ibms-blue/20 bg-white px-6 py-3 text-sm font-extrabold text-ibms-blue shadow-sm transition-all duration-300 hover:-translate-y-1 hover:bg-ibms-blue hover:text-white hover:shadow-lg"
+            >
+              Voir toutes nos réalisations
+              <ArrowUpRight className="h-4 w-4" />
+            </Link>
+          </div>
+        </Reveal>
+
       </div>
     </section>
   );
