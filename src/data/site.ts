@@ -731,13 +731,30 @@ export type Testimonial = {
   name: string;
   role: string;
   text: string;
+  image: string;
 };
-
 export const testimonials: Testimonial[] = [
-  { name: 'Oumar Sy', role: 'Développeur web — Ancien apprenant', text: "IBMS m'a permis d'acquérir les compétences techniques nécessaires pour évoluer professionnellement. Aujourd'hui je travaille en tant que développeur full-stack dans une entreprise de Dakar." },
-  { name: 'Mariama Touré', role: 'Directrice — Partenaire d’IBMS', text: "Un accompagnement de qualité qui a véritablement accéléré notre transformation digitale. L'équipe IBMS comprend les réalités du terrain et s'adapte à nos besoins." },
-  { name: 'Ibrahima Gueye', role: 'CTO — Entreprise partenaire', text: "Les profils formés par IBMS répondent précisément à nos besoins en compétences numériques. C'est un vivier de talents précieux pour notre écosystème." },
+  {
+    name: 'M. Diop',
+    role: 'Enseignant à IBMS',
+    text: "En tant qu'enseignant à IBMS, je constate l'importance d'une formation axée sur la pratique et la transmission des compétences.",
+    image: '/assets/images/temoignages/diop.jpg',
+  },
+  {
+    name: 'Aminata Diop',
+    role: 'Étudiante à l’UAM',
+    text: "Mon expérience avec IBMS me permet de découvrir davantage le monde du numérique et de développer mes compétences.",
+    image: '/assets/images/temoignages/aminata.jpg',
+  },
+  {
+    name: 'Ousmane Taha Niang',
+    role: 'Intervenant à IBMS',
+    text: "IBMS représente une opportunité d'approfondir mes connaissances et de développer de nouvelles compétences numériques.",
+    image: '/assets/images/temoignages/ousmane.jpg',
+  },
 ];
+
+
 
 export type SupportReason = {
   num: string;

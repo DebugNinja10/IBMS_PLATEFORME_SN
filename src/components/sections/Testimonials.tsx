@@ -24,8 +24,17 @@ export function Testimonials() {
                   "{t.text}"
                 </p>
                 <div className="flex items-center gap-3 pt-4 border-t border-ibms-veil">
-                  <div className="w-10 h-10 rounded-full bg-gradient-ibms flex items-center justify-center text-white font-bold text-sm">
-                    {t.name.charAt(0)}
+                  <div className="relative w-10 h-10 rounded-full bg-gradient-ibms flex items-center justify-center overflow-hidden text-white font-bold text-sm">
+                    <span>{t.name.charAt(0)}</span>
+                    <img
+                      src={t.image}
+                      alt={t.name}
+                      className="absolute inset-0 h-full w-full object-cover"
+                      loading="lazy"
+                      onError={(event) => {
+                        event.currentTarget.hidden = true;
+                      }}
+                    />
                   </div>
                   <div>
                     <div className="text-sm font-bold text-ibms-ink">{t.name}</div>
