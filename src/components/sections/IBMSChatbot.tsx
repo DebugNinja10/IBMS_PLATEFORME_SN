@@ -57,6 +57,7 @@ export function IBMSChatbot() {
     },
   ]);
   const [input, setInput] = useState('');
+  const [isOpen, setIsOpen] = useState(false);
 
   const sendMessage = (value: string) => {
     const question = value.trim();
@@ -71,7 +72,9 @@ export function IBMSChatbot() {
   };
 
   return (
-    <div className="mt-6 max-w-lg overflow-hidden rounded-2xl border border-white/10 bg-[#0c1b35]/90 shadow-2xl shadow-black/20">
+    <div className="fixed bottom-24 right-5 z-[60] flex flex-col items-end gap-3">
+      {isOpen && (
+        <div className="w-[min(360px,calc(100vw-2.5rem))] max-w-lg overflow-hidden rounded-2xl border border-white/10 bg-[#0c1b35]/95 shadow-2xl shadow-black/30">
       <div className="flex items-center justify-between border-b border-white/10 bg-white/[0.04] p-3">
         <div className="flex items-center gap-3">
           <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-ibms-cyan/15 text-ibms-cyan">
@@ -155,6 +158,17 @@ export function IBMSChatbot() {
       <p className="px-4 pb-3 text-center text-[10px] text-white/35">
         Assistant virtuel IBMS · Réponses automatiques
       </p>
+        </div>
+      )}
+      <button
+        type="button"
+        onClick={() => setIsOpen((open) => !open)}
+        aria-label={isOpen ? "Fermer le chatbot IBMS" : "Ouvrir le chatbot IBMS"}
+        aria-expanded={isOpen}
+        className="flex h-14 w-14 items-center justify-center rounded-full border-2 border-white bg-[#075BE8] text-white shadow-xl shadow-blue-900/30 transition-all duration-300 hover:scale-110 hover:bg-[#0875FF]"
+      >
+        <Bot size={27} />
+      </button>
     </div>
   );
 }

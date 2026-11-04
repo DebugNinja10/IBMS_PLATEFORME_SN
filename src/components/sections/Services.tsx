@@ -26,7 +26,7 @@ export function Services() {
               <Reveal key={service.num} delay={index * 60}>
                   <Link to={`/services/${service.num}`} className={`group flex w-full items-center gap-4 border-b border-ibms-ink/15 py-6 text-left transition-colors duration-300 ${active === index ? 'bg-ibms-light/70' : ''}`}>
                   <span className={`pl-3 text-sm font-bold transition-colors ${active === index ? 'text-ibms-blue' : 'text-ibms-slate'}`}>{service.num}</span>
-                  <span className={`flex-1 text-lg font-bold transition-all duration-300 ease-ibms ${active === index ? 'translate-x-2 text-ibms-blue' : 'text-ibms-ink group-hover:translate-x-2 group-hover:text-ibms-blue'}`}>{service.title}</span>
+                  <span className={`flex-1 text-base font-bold transition-all duration-300 ease-ibms ${active === index ? 'translate-x-2 text-ibms-blue' : 'text-ibms-ink group-hover:translate-x-2 group-hover:text-ibms-blue'}`}>{service.title}</span>
                   <ArrowUpRight className={`mr-3 h-5 w-5 transition-all duration-300 ${active === index ? 'text-ibms-blue' : 'text-ibms-slate group-hover:text-ibms-blue'}`} strokeWidth={2} />
                   </Link>
               </Reveal>

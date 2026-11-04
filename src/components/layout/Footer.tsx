@@ -12,8 +12,7 @@ const footerNav = [
       { label: 'Formations', path: '/formations' },
       { label: 'Services & Consultance', path: '/services' },
       { label: 'Projets', path: '/projets' },
-      { label: 'Blog', path: '/blog' },
-      { label: 'Équipe', path: '/equipe' },
+{ label: 'Équipe', path: '/equipe' },
     ],
   },
   {
@@ -30,8 +29,7 @@ const footerNav = [
   {
     title: 'Ressources',
     links: [
-      { label: 'Blog', path: '/blog' },
-      { label: 'Guides', path: '/guides' },
+{ label: 'Guides', path: '/guides' },
       { label: 'Événements', path: '/evenements' },
       { label: 'Partenaires', path: '/partenaires' },
       { label: 'FAQ', path: '/faq' },

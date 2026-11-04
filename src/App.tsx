@@ -1,9 +1,8 @@
-
+import { IBMSChatbot } from '@/components/sections/IBMSChatbot';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { Hero } from '@/components/sections/Hero';
-import { ExploreIBMS } from '@/components/sections/ExploreIBMS';
 import { Vision } from '@/components/sections/Vision';
 import { Mission } from '@/components/sections/Mission';
 import { KeyFigures } from '@/components/sections/KeyFigures';
@@ -11,7 +10,6 @@ import { Formations } from '@/components/sections/Formations';
 import { Services } from '@/components/sections/Services';
 import { Projects } from '@/components/sections/Projects';
 import { Events } from '@/components/sections/Events';
-import { Resources } from '@/components/sections/Resources';
 import { Testimonials } from '@/components/sections/Testimonials';
 import { WhySupport } from '@/components/sections/WhySupport';
 import { Team } from '@/components/sections/Team';
@@ -28,7 +26,6 @@ import { FormationDetailPage } from '@/pages/FormationDetailPage';
 import { ServicesPage } from '@/pages/ServicesPage';
 import { ServiceDetailPage } from '@/pages/ServiceDetailPage';
 import { ProjetsPage } from '@/pages/ProjetsPage';
-import { BlogPage } from '@/pages/BlogPage';
 import { GuidesPage } from '@/pages/GuidesPage';
 import { GuideDetailPage } from '@/pages/GuideDetailPage';
 import { EquipePage } from '@/pages/EquipePage';
@@ -36,7 +33,6 @@ import { PartenairesPage } from '@/pages/PartenairesPage';
 import { EvenementsPage } from '@/pages/EvenementsPage';
 import { FaqPage } from '@/pages/FaqPage';
 import { ContactPage } from '@/pages/ContactPage';
-import { ArticleDetailPage } from '@/pages/ArticleDetailPage';
 import { ProjetDetailPage } from '@/pages/ProjetDetailPage';
 import { EvenementDetailPage } from '@/pages/EvenementDetailPage';
 import { MembreDetailPage } from '@/pages/MembreDetailPage';
@@ -49,7 +45,6 @@ function HomePage() {
   return (
     <>
       <Hero />
-      <ExploreIBMS />
       <Vision />
       <Mission />
       <KeyFigures />
@@ -57,8 +52,7 @@ function HomePage() {
       <Services />
       <Projects />
       <Events />
-      <Resources />
-      <Testimonials />
+<Testimonials />
       <WhySupport />
       <Team />
       <Partners />
@@ -86,8 +80,6 @@ function App() {
           <Route path="/services/:id" element={<ServiceDetailPage />} />
           <Route path="/projets" element={<ProjetsPage />} />
           <Route path="/projets/:id" element={<ProjetDetailPage />} />
-          <Route path="/blog" element={<BlogPage />} />
-          <Route path="/blog/:id" element={<ArticleDetailPage />} />
           <Route path="/guides" element={<GuidesPage />} />
           <Route path="/guides/:id" element={<GuideDetailPage />} />
           <Route path="/equipe" element={<EquipePage />} />
@@ -105,6 +97,7 @@ function App() {
       </main>
 
       {/* Bouton WhatsApp IBMS */}
+      <IBMSChatbot />
       <a
         href="https://wa.me/221773962707?text=Bonjour%20IBMS%2C%20je%20souhaite%20plus%20d%27informations."
         target="_blank"

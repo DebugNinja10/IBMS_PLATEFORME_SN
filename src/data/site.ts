@@ -14,9 +14,9 @@ export const images = {
   formation8: 'https://images.pexels.com/photos/1181251/pexels-photo-1181251.jpeg?auto=compress&cs=tinysrgb&w=1200',
   formation9: 'https://images.pexels.com/photos/6457546/pexels-photo-6457546.jpeg?auto=compress&cs=tinysrgb&w=1200',
   formation10: 'https://images.pexels.com/photos/5668879/pexels-photo-5668879.jpeg?auto=compress&cs=tinysrgb&w=1200',
-  event1: 'https://images.pexels.com/photos/9275222/pexels-photo-9275222.jpeg?auto=compress&cs=tinysrgb&w=640',
-  event2: 'https://images.pexels.com/photos/29180747/pexels-photo-29180747.jpeg?auto=compress&cs=tinysrgb&w=640',
-  event3: 'https://images.pexels.com/photos/28683723/pexels-photo-28683723.jpeg?auto=compress&cs=tinysrgb&w=640',
+  event1: 'https://www.impact.sn/photo/art/grande/90940853-64033919.jpg?v=1757174098',
+  event2: 'https://gn-university.com/uploads/uidesign.png',
+  event3: 'https://saltis-techinov.org/_next/image?q=75&url=%2Fimages%2Fretour_photo%2FIMG_3647-scaled.jpg&w=1200',
   team1: '/assets/images/equipe/ndiaye.jpeg',
   team2: '/assets/images/equipe/abdouaziz.jpeg',
   team3: '/assets/images/equipe/justesse.jpeg',
@@ -91,10 +91,8 @@ export const navItems: NavItem[] = [
     label: 'Ressources',
     href: '/blog',
     children: [
-      { label: 'Blog', num: '01', desc: "Articles et réflexions de l'équipe IBMS.", path: '/blog' },
       { label: 'Guides', num: '02', desc: 'Ressources pédagogiques détaillées.', path: '/guides' },
       { label: 'Événements', num: '03', desc: 'Formations, workshops et conférences.', path: '/evenements' },
-      { label: 'Actualités', num: '04', desc: "Les dernières nouvelles de l'entreprise.", path: '/blog' },
     ],
   },
   {
