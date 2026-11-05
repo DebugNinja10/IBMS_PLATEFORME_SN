@@ -19,12 +19,21 @@ export function Testimonials() {
           {testimonials.map((t, idx) => (
             <Reveal key={idx} delay={idx * 100}>
               <div className="card h-full">
-                <div className="relative mb-5 flex h-28 w-28 items-center justify-center overflow-hidden rounded-full bg-gradient-ibms text-3xl font-bold text-white">
-                  <span>{t.name.charAt(0)}</span>
+                <div className="relative mb-5 flex h-32 w-32 items-center justify-center overflow-hidden rounded-full bg-gradient-ibms shadow-lg ring-4 ring-white sm:h-36 sm:w-36 md:h-40 md:w-40">
                   <img
                     src={t.image}
                     alt={t.name}
-                    className="absolute inset-0 h-full w-full object-cover"
+                    className="absolute inset-0 h-full w-full scale-125 object-cover"
+                    style={{
+                      objectPosition:
+                        t.name === 'M. Diop'
+                          ? 'center 18%'
+                          : t.name === 'Aminata Diop'
+                            ? 'center top'
+                            : t.name === 'Ousmane Taha Niang'
+                              ? 'center 22%'
+                              : 'center center',
+                    }}
                     loading="lazy"
                     onError={(event) => {
                       event.currentTarget.hidden = true;
