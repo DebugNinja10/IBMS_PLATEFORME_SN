@@ -1,9 +1,10 @@
-import { IBMSChatbot } from '@/components/sections/IBMSChatbot';
+﻿import { IBMSChatbot } from '@/components/sections/IBMSChatbot';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { Hero } from '@/components/sections/Hero';
 import { Vision } from '@/components/sections/Vision';
+import { MotDuCEO } from '@/components/sections/MotDuCEO';
 import { Mission } from '@/components/sections/Mission';
 import { KeyFigures } from '@/components/sections/KeyFigures';
 import { Formations } from '@/components/sections/Formations';
@@ -46,6 +47,7 @@ function HomePage() {
     <>
       <Hero />
       <Vision />
+      <MotDuCEO />
       <Mission />
       <KeyFigures />
       <Formations />
@@ -122,3 +124,6 @@ function App() {
 }
 
 export default App;
+
+
+
