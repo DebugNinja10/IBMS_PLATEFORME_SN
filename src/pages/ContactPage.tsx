@@ -74,13 +74,11 @@ export function ContactPage() {
       intro="Vous avez un projet à réaliser ? Présentez-nous votre besoin et notre équipe vous accompagnera."
     >
       <section className="relative overflow-hidden bg-gradient-to-br from-blue-50 via-white to-blue-100 py-12 md:py-16">
-
         {/* Décoration de fond */}
         <div className="pointer-events-none absolute -right-32 -top-32 h-96 w-96 rounded-full bg-blue-200/30 blur-3xl" />
         <div className="pointer-events-none absolute -bottom-32 -left-32 h-96 w-96 rounded-full bg-blue-100/60 blur-3xl" />
 
         <div className="container-ibms relative z-10 px-4">
-
           {/* En-tête */}
           <Reveal>
             <div className="mb-10 text-center lg:text-left">
@@ -102,12 +100,10 @@ export function ContactPage() {
 
           {/* Deux cartes */}
           <div className="grid grid-cols-1 items-stretch gap-6 lg:grid-cols-12 lg:gap-7">
-
             {/* Coordonnées */}
             <div className="lg:col-span-4">
               <Reveal>
                 <div className="flex h-full flex-col rounded-[28px] border border-blue-100 bg-white/95 p-6 shadow-xl shadow-blue-100/70 md:p-8">
-
                   <div className="mb-8 flex items-center gap-4">
                     <div className="rounded-full bg-gradient-to-r from-blue-700 to-blue-500 px-6 py-3 text-lg font-bold text-white shadow-md">
                       Nos coordonnées
@@ -116,7 +112,6 @@ export function ContactPage() {
                   </div>
 
                   <div className="space-y-7">
-
                     {/* Téléphone */}
                     <div className="flex items-center gap-4">
                       <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-blue-50">
@@ -176,7 +171,6 @@ export function ContactPage() {
                         </p>
                       </div>
                     </div>
-
                   </div>
 
                   {/* Message de fin */}
@@ -191,7 +185,6 @@ export function ContactPage() {
                       <div className="mx-auto mt-4 h-1 w-24 rounded-full bg-blue-400" />
                     </div>
                   </div>
-
                 </div>
               </Reveal>
             </div>
@@ -200,7 +193,6 @@ export function ContactPage() {
             <div className="lg:col-span-8">
               <Reveal delay={150}>
                 <div className="rounded-[28px] border border-blue-100 bg-white/95 p-6 shadow-xl shadow-blue-100/70 md:p-8">
-
                   {/* Titre formulaire */}
                   <div className="mb-3 flex items-center gap-4">
                     <div className="flex shrink-0 items-center gap-3 rounded-full bg-gradient-to-r from-blue-700 to-blue-500 px-6 py-3 text-white shadow-md">
@@ -221,10 +213,8 @@ export function ContactPage() {
                     onSubmit={handleSubmit}
                     className="space-y-5"
                   >
-
                     {/* Nom et Email */}
                     <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
-
                       <div>
                         <label className="mb-2 block text-sm font-bold text-blue-950">
                           Nom complet <span className="text-red-500">*</span>
@@ -258,7 +248,6 @@ export function ContactPage() {
                           />
                         </div>
                       </div>
-
                     </div>
 
                     {/* Projet */}
@@ -286,7 +275,6 @@ export function ContactPage() {
                       </label>
 
                       <label className="flex cursor-pointer items-center justify-center gap-4 rounded-2xl border-2 border-dashed border-blue-300 bg-blue-50/50 px-5 py-6 transition-all hover:border-blue-600 hover:bg-blue-50">
-
                         <FileText className="h-10 w-10 shrink-0 text-blue-700" />
 
                         <div>
@@ -361,12 +349,10 @@ export function ContactPage() {
                       <Send className="h-5 w-5" />
                       {sending ? 'Envoi en cours...' : 'Envoyer ma demande'}
                     </button>
-
                   </form>
                 </div>
               </Reveal>
             </div>
-
           </div>
         </div>
       </section>
