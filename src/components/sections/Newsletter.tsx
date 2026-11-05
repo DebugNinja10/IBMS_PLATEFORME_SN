@@ -34,9 +34,9 @@ export function Newsletter() {
                     type="email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    placeholder="Votre email"
+                    placeholder="Votre adresse e-mail"
                     className="flex-1 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl px-5 py-3.5 text-sm text-white placeholder:text-white/40 focus:outline-none focus:border-white/40 transition-colors duration-300"
-                    aria-label="Email"
+                    aria-label="Adresse e-mail"
                   />
                   <button
                     type="submit"
@@ -47,7 +47,7 @@ export function Newsletter() {
                   </button>
                 </form>
                 <p className="mt-3 text-xs text-white/40">
-                  Pas de spam. Désabonnement à tout moment.
+                  Aucun courriel indésirable. Désabonnez-vous à tout moment.
                 </p>
               </div>
             </div>

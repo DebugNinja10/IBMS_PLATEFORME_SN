@@ -10,7 +10,7 @@ export function Testimonials() {
           <div className="text-center mb-12">
             <div className="label text-ibms-blue mb-4">Témoignages</div>
             <h2 className="text-section-title font-extrabold text-ibms-ink">
-              Ce qu'ils <span className="text-gradient">disent.</span>
+              Ce qu’ils <span className="text-gradient">disent.</span>
             </h2>
           </div>
         </Reveal>

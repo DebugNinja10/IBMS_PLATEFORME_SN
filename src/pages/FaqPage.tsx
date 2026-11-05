@@ -12,7 +12,7 @@ export function FaqPage() {
       num="11"
       label="FAQ"
       title={<>Questions <span className="text-ibms-cyan">fréquentes.</span></>}
-      intro="Les réponses aux questions les plus posées sur nos formations, nos services et notre fonctionnement."
+      intro="Les réponses aux questions les plus fréquentes sur nos formations, nos services et notre fonctionnement."
     >
       <section className="section-pad bg-white">
         <div className="container-ibms">

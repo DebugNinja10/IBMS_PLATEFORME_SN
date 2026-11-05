@@ -15,7 +15,7 @@ export function ServicesPage() {
   return (
     <PageLayout
       num="04"
-      label="Services"
+      label="Services & Consultance"
       title={<>Des solutions pour <span className="text-ibms-cyan">transformer.</span></>}
       intro="Cinq expertises complémentaires au service de votre transformation digitale, de la formation au déploiement."
     >

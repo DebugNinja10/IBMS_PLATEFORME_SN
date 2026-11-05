@@ -28,7 +28,7 @@ const items = [
   },
   {
     num: '04',
-    title: 'Vacances Digital',
+    title: 'Vacances digitales',
     desc: "Profitez de vos vacances pour investir dans votre avenir. Découvrez le numérique, développez de nouvelles compétences et préparez votre avenir professionnel grâce à des formations pratiques et accessibles.",
     Icon: GraduationCap,
   },

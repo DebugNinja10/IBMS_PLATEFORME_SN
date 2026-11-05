@@ -14,7 +14,7 @@ export function ServiceDetailPage() {
   if (!service || !detail) return <Navigate to="/services" replace />;
 
   return (
-    <PageLayout num={service.num} label={`Service / ${service.title}`} title={service.title} intro={detail.intro}>
+    <PageLayout num={service.num} label={`Services & consultance / ${service.title}`} title={service.title} intro={detail.intro}>
       <section className="section-pad bg-white">
         <div className="container-ibms">
           <div className="grid grid-cols-1 gap-12 lg:grid-cols-12">

@@ -10,7 +10,7 @@ const sections = [
   { num: '01', title: 'Qui sommes-nous ?', desc: "IBMS est une entreprise informatique qui forme les talents et conçoit des solutions numériques pour répondre aux besoins des entreprises et des organisations." },
   { num: '02', title: 'Notre histoire', desc: "Née de la volonté de combler le fossé entre les besoins du marché et les compétences disponibles, IBMS a construit un parcours d'accompagnement rigoureux, adapté aux réalités du marché africain et ouvert au monde." },
   { num: '03', title: 'Notre vision', desc: "Faire de la compétence un moteur d'innovation et de transformation. IBMS aspire à donner aux compétences numériques une place essentielle dans le développement, en créant un environnement favorable pour les apprenants, les entreprises et les organisations." },
-  { num: '04', title: 'Notre mission', desc: "Former, accompagner, innover, transformer. Nous accompagnons l'écosystème dans l'adoption des technologies numériques par un accompagnement opérationnel : ateliers, mentorat, mise en réseau et accès aux ressources." },
+  { num: '04', title: 'Notre mission', desc: "Former, accompagner, innover, transformer. Nous aidons l’écosystème à adopter les technologies numériques grâce à des ateliers, du mentorat, des mises en réseau et un accès aux ressources." },
   { num: '05', title: 'Nos valeurs', desc: "Excellence, intégrité, accessibilité, innovation responsable et impact durable. Ces principes guident chaque action d'IBMS, de la conception des programmes à l'accompagnement des talents." },
 ];
 

@@ -36,7 +36,7 @@ const expertises = [
   },
   {
     num: '04',
-    title: 'Data Science',
+    title: 'Science des données',
     desc: 'Transformez vos données en informations utiles pour mieux comprendre votre activité et éclairer vos décisions.',
     details: ['Analyse de données', 'Visualisation', 'Tableaux de bord'],
     Icon: ChartNoAxesCombined,

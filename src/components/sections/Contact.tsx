@@ -42,7 +42,7 @@ export function Contact() {
                     <Mail className="h-5 w-5 text-ibms-blue" strokeWidth={2} />
                   </div>
                   <div>
-                    <div className="label text-ibms-slate mb-1">Email</div>
+                    <div className="label text-ibms-slate mb-1">Adresse e-mail</div>
                     <a href="mailto:startupibms@gmail.com" className="text-base font-semibold text-ibms-ink hover:text-ibms-blue transition-colors duration-300">
                       startupibms@gmail.com
                     </a>
@@ -56,7 +56,7 @@ export function Contact() {
                     <div className="label text-ibms-slate mb-1">Adresse</div>
                     <div className="space-y-1 text-base font-semibold text-ibms-ink">
                       <p>Thiès, Angle Serigne Fallou</p>
-                      <p>Dakar, Sacrée Coeur</p>
+                      <p>Dakar, Sacré-Cœur</p>
                     </div>
                   </div>
                 </div>
@@ -91,7 +91,7 @@ export function Contact() {
                   />
                 </div>
                 <div>
-                  <label className="label text-ibms-slate mb-2 block">Email</label>
+                  <label className="label text-ibms-slate mb-2 block">Adresse e-mail</label>
                   <input
                     type="email"
                     value={form.email}

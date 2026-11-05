@@ -13,7 +13,7 @@ export function Events() {
             <Reveal>
               <div className="label text-ibms-blue mb-4">Événements</div>
               <h2 className="text-section-title font-extrabold text-ibms-ink">
-                Nos prochaines
+                Nos événements
                 <br />
                 <span className="text-gradient">rencontres.</span>
               </h2>

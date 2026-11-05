@@ -41,7 +41,7 @@ export function Hero() {
                 </span>
                 <span className="hidden h-px w-16 bg-white/50 sm:block" />
                 <span className="hidden text-xs font-bold uppercase tracking-widest text-white/80 sm:block">
-                  Thiès / SN
+                  Thiès / Sénégal
                 </span>
               </div>
             </Reveal>

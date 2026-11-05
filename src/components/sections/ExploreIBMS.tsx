@@ -10,30 +10,30 @@ import {
 
 const destinations = [
   {
-    title: 'DÃ©couvrir nos formations',
+    title: 'Découvrir nos formations',
     description:
-      'DÃ©veloppez vos compÃ©tences grÃ¢ce Ã  nos programmes de formation adaptÃ©s aux besoins du marchÃ©.',
+      'Développez vos compétences grâce à nos programmes de formation adaptés aux besoins du marché.',
     link: '/formations',
     icon: GraduationCap,
   },
   {
     title: 'Solutions digitales',
     description:
-      'DÃ©couvrez nos solutions numÃ©riques pour accompagner vos projets et votre transformation digitale.',
+      'Découvrez nos solutions numériques pour accompagner vos projets et votre transformation digitale.',
     link: '/solutions-digitales',
     icon: MonitorSmartphone,
   },
   {
     title: 'Intelligence artificielle',
     description:
-      "Explorez les possibilitÃ©s de l'intelligence artificielle et ses applications dans vos activitÃ©s.",
+      "Explorez les possibilités de l'intelligence artificielle et ses applications dans vos activités.",
     link: '/intelligence-artificielle',
     icon: BrainCircuit,
   },
   {
-    title: 'DÃ©couvrir IBMS',
+    title: 'Découvrir IBMS',
     description:
-      'Apprenez Ã  connaÃ®tre notre entreprise, notre vision, notre expertise et nos engagements.',
+      'Apprenez à connaître notre entreprise, notre vision, notre expertise et nos engagements.',
     link: '/a-propos',
     icon: Building2,
   },
@@ -50,12 +50,12 @@ export function ExploreIBMS() {
           </span>
 
           <h2 className="mt-3 text-2xl font-bold text-white md:text-3xl">
-            Explorez notre univers numÃ©rique
+            Explorez notre univers numérique
           </h2>
 
           <p className="mt-4 text-base leading-7 text-slate-300">
-            DÃ©couvrez nos activitÃ©s et trouvez facilement
-            les solutions adaptÃ©es Ã  vos besoins.
+            Découvrez nos activités et trouvez facilement
+            les solutions adaptées à vos besoins.
           </p>
         </div>
 
@@ -94,5 +94,4 @@ export function ExploreIBMS() {
     </section>
   );
 }
-
 

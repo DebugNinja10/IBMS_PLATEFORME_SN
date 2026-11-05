@@ -9,8 +9,8 @@ export function EvenementsPage() {
     <PageLayout
       num="10"
       label="Événements"
-      title={<>Nos prochaines <span className="text-ibms-cyan">rencontres.</span></>}
-      intro="Formations, workshops, conférences et événements organisés par IBMS pour la communauté tech."
+      title={<>Nos <span className="text-ibms-cyan">événements.</span></>}
+      intro="Ateliers, conférences et rencontres organisés par IBMS autour du numérique."
     >
       <section className="section-pad bg-white">
         <div className="container-ibms">

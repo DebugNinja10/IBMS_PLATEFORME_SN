@@ -131,7 +131,7 @@ export function Header() {
               </a>
 
               <Link to="/contact" className="btn-primary">
-                Guide
+                Contact
               </Link>
             </div>
 
@@ -217,7 +217,7 @@ export function Header() {
           </Link>
 
           <Link to="/contact" className="btn-primary mt-4 w-full justify-center" onClick={() => setMobileOpen(false)}>
-            Guide
+            Contact
           </Link>
         </nav>
       </div>

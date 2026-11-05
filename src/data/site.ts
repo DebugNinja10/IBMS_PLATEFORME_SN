@@ -1,4 +1,4 @@
-// Images Pexels
+﻿// Images Pexels
 export const images = {
   heroMain: 'https://images.pexels.com/photos/33920044/pexels-photo-33920044.jpeg?auto=compress&cs=tinysrgb&w=828',
   heroSecondary: 'https://images.pexels.com/photos/33920035/pexels-photo-33920035.jpeg?auto=compress&cs=tinysrgb&w=828',
@@ -53,6 +53,7 @@ export const navItems: NavItem[] = [
       { label: 'Notre mission', num: '04', desc: 'Former, accompagner, innover, transformer.', path: '/a-propos' },
       { label: 'Nos valeurs', num: '05', desc: 'Les principes qui guident chaque action.', path: '/a-propos' },
       { label: 'Notre équipe', num: '06', desc: "Les personnes derrière l'entreprise.", path: '/equipe' },
+      { label: 'Le mot du CEO', num: '07', desc: "Découvrez la vision et les ambitions de Mohamed Ndiaye.", path: '/#mot-du-ceo' },
     ],
   },
   {
@@ -92,7 +93,7 @@ export const navItems: NavItem[] = [
     href: '/blog',
     children: [
       { label: 'Guides', num: '02', desc: 'Ressources pédagogiques détaillées.', path: '/guides' },
-      { label: 'Événements', num: '03', desc: 'Formations, workshops et conférences.', path: '/evenements' },
+      { label: 'Événements', num: '03', desc: 'Formations, ateliers et conférences.', path: '/evenements' },
     ],
   },
   {
@@ -220,15 +221,15 @@ export const trainingProjects: TrainingProject[] = [
     desc: 'Un projet de formation qui fait découvrir la robotique et les technologies aux jeunes par des activités pratiques.',
     details: [
       'Avec Force-n, IBMS a animé un parcours d’initiation aux sciences, aux technologies et à la robotique.',
-      'Les jeunes ont été invités à explorer les notions de base, observer des démonstrations et apprendre en expérimentant en groupe.',
+      'Les jeunes ont été invités à explorer les notions de base, à observer des démonstrations et à apprendre en expérimentant en groupe.',
       'L’approche privilégie la curiosité, la résolution de problèmes et la mise en pratique pour rendre les disciplines numériques accessibles.',
       'La galerie rassemble les photos disponibles de cette initiative.',
     ],
   },
   {
     slug: 'jang-codage', title: 'Jang-codage', theme: 'Programmation', image: images.formation1, gallery: [images.formation1],
-    desc: 'Des cours pour apprendre à coder et à programmer, des premiers raisonnements logiques à la réalisation de petits projets.',
-    details: ['Les séances introduisent les bases de la logique informatique et de la programmation.', 'Les apprenants progressent par exercices guidés et mettent en pratique les notions en réalisant leurs premiers projets numériques.'],
+    desc: 'Ces cours apprennent aux participants à coder, des bases du raisonnement logique jusqu’à la réalisation de petits projets.',
+    details: ['Les séances introduisent les bases de la logique informatique et de la programmation.', 'Les apprenants progressent grâce à des exercices guidés et mettent en pratique les notions en réalisant leurs premiers projets numériques.'],
   },
   {
     slug: 'boot-camp-ayy-informatique', title: 'Boot Camp Numérique — Ayy Informatique', theme: 'Informatique & numérique', image: images.formation2, gallery: [images.formation2],
@@ -424,7 +425,7 @@ export const projects: Project[] = [
       "Conception d’une interface web basée sur TypeScript.",
       "Structuration des fonctionnalités de gestion des véhicules et des réservations.",
       "Utilisation de Supabase dans l’architecture de l’application.",
-      "Prise en compte des rôles utilisateurs et de la synchronisation des données."
+      "Prise en compte des rôles des utilisateurs et de la synchronisation des données."
     ],
     impact: [
       "Centralisation envisagée des informations liées au transport.",
@@ -563,7 +564,7 @@ export const team: TeamMember[] = [
   {
     num: '01',
     name: 'Mohamed Ndiaye',
-    role: 'CEO de IBMS',
+    role: 'CEO d’IBMS',
     image: images.team1,
     bio: 'Mohamed Ndiaye pilote la vision stratégique d’IBMS et accompagne le développement de l’entreprise autour de l’informatique, de la formation et de l’innovation numérique.',
     expertise: ['Leadership', 'Stratégie', 'Innovation'],
@@ -573,9 +574,9 @@ export const team: TeamMember[] = [
   {
     num: '02',
     name: 'Abdou Aziz SECK',
-    role: 'Développeur Full Stack & Machine Learning',
+    role: 'Développeur full-stack et spécialiste en machine learning',
     image: images.team2,
-    bio: 'Abdou Aziz SECK conçoit des solutions digitales robustes et applique les méthodes du machine learning pour transformer des idées en produits concrets et exploitable.',
+    bio: 'Abdou Aziz SECK conçoit des solutions digitales robustes et applique les méthodes du machine learning pour transformer des idées en produits concrets et exploitables.',
     expertise: ['Full Stack', 'Machine Learning', 'Architecture'],
     email: 'contact@ibms.sn',
     linkedin: 'https://www.linkedin.com',
@@ -583,7 +584,7 @@ export const team: TeamMember[] = [
   {
     num: '03',
     name: 'Justesse Imelda OYENGA',
-    role: 'Formatrice Senior',
+    role: 'Formatrice senior',
     image: images.team3,
     bio: 'Justesse Imelda OYENGA anime des parcours de formation structurés, pédagogiques et orientés résultats, avec un fort souci de transmission et d’accompagnement.',
     expertise: ['Pédagogie', 'Formation', 'Accompagnement'],
@@ -593,7 +594,7 @@ export const team: TeamMember[] = [
   {
     num: '04',
     name: 'Sidy WADE',
-    role: 'Coach Formateur & Doctorant en IA',
+    role: 'Coach-formateur et doctorant en IA',
     image: images.team4,
     bio: 'Sidy WADE accompagne les apprenants et les professionnels avec une approche centrée sur la pratique, la réflexion critique et les usages avancés de l’intelligence artificielle.',
     expertise: ['IA', 'Coaching', 'Mentorat'],
@@ -631,7 +632,7 @@ export type Stat = {
 export const stats: Stat[] = [
   { value: 500, suffix: '+', label: 'Étudiants accompagnés' },
   { value: 15, suffix: '+', label: 'Formations' },
-  { value: 98, suffix: '%', label: 'Satisfaction' },
+  { value: 98, suffix: '%', label: 'Taux de satisfaction' },
   { value: 6, suffix: '+', label: 'Partenaires' },
 ];
 
@@ -653,15 +654,15 @@ export const events: EventItem[] = [
     "Aucun prérequis technique n'est nécessaire. Les participants repartiront avec une compréhension claire de ce qu'est l'IA, de ses possibilités et de ses limites actuelles.",
     "L'atelier est animé par Cheikh Fall, responsable Innovation chez IBMS, avec la participation d'experts invités du secteur."
   ] },
-  { date: '18', month: 'OCT', title: 'Workshop UX', type: 'Workshop', desc: 'Concevoir des interfaces utilisateur efficaces et intuitives.', image: images.event2, location: 'En ligne', time: '14h00 — 18h00', longDesc: [
-    "Ce workshop pratique vous plonge dans la conception d'interfaces utilisateur efficaces. Vous apprendrez les principes du design centré utilisateur, la création de wireframes et de prototypes interactifs.",
-    "Le workshop inclut des exercices pratiques avec des outils de prototypage, des sessions de feedback et une étude de cas réelle.",
+  { date: '18', month: 'OCT', title: 'Atelier UX', type: 'Atelier', desc: 'Concevoir des interfaces utilisateur efficaces et intuitives.', image: images.event2, location: 'En ligne', time: '14h00 — 18h00', longDesc: [
+    "Cet atelier pratique vous initie à la conception d'interfaces utilisateur efficaces. Vous découvrirez les principes du design centré sur l'utilisateur, la création de maquettes filaires et de prototypes interactifs.",
+    "L’atelier comprend des exercices pratiques avec des outils de prototypage, des séances de retour d’expérience et une étude de cas réelle.",
     "À l'issue de la session, vous aurez conçu un prototype d'interface complet et présenté votre travail au reste du groupe."
   ] },
   { date: '25', month: 'OCT', title: 'Conférence Innovation', type: 'Conférence', desc: 'L\'innovation technologique en Afrique : défis et opportunités.', image: images.event3, location: 'Campus IBMS, Dakar', time: '10h00 — 16h00', longDesc: [
     "Cette conférence rassemble entrepreneurs, étudiants et professionnels autour de l'innovation technologique en Afrique. Des intervenants de renom partageront leurs expériences sur les défis et opportunités du continent.",
-    "Au programme : table ronde sur l'écosystème tech africain, présentations de startups innovantes, et networking avec les acteurs clés du secteur.",
-    "L'entrée est libre mais l'inscription est obligatoire. Places limitées."
+    "Au programme : une table ronde sur l'écosystème technologique africain, des présentations de jeunes entreprises innovantes et des échanges avec les acteurs clés du secteur.",
+    "L'entrée est libre, mais l'inscription est obligatoire. Le nombre de places est limité."
   ] },
 ];
 
@@ -678,19 +679,19 @@ export type Article = {
 };
 
 export const articles: Article[] = [
-  { num: '01', category: 'Innovation', date: '10 Oct 2025', readTime: '5 min', title: "L'IA au service de l'éducation africaine", author: 'Équipe IBMS', excerpt: "Comment l'intelligence artificielle transforme l'accès à l'éducation et la formation sur le continent.", image: 'https://images.pexels.com/photos/12969403/pexels-photo-12969403.jpeg?auto=compress&cs=tinysrgb&w=640', content: [
+  { num: '01', category: 'Innovation', date: '10 oct. 2025', readTime: '5 min', title: "L'IA au service de l'éducation africaine", author: 'Équipe IBMS', excerpt: "Comment l'intelligence artificielle transforme l'accès à l'éducation et à la formation sur le continent.", image: 'https://images.pexels.com/photos/12969403/pexels-photo-12969403.jpeg?auto=compress&cs=tinysrgb&w=640', content: [
     "L'intelligence artificielle est en train de redéfinir l'accès à l'éducation en Afrique. Des plateformes adaptatives aux assistants virtuels, les technologies d'IA ouvrent de nouvelles perspectives pour les apprenants et les formateurs.",
     "Chez IBMS, nous intégrons progressivement ces outils dans nos parcours de formation. L'objectif n'est pas de remplacer l'humain, mais de libérer du temps pour le mentorat, le coaching et les projets concrets.",
-    "Les défis restent nombreux : connectivité, coûts, et nécessité d'un cadre éthique solide. Mais les opportunités sont immenses, notamment pour les zones rurales et les apprenants éloignés des centres urbains.",
+    "Les défis restent nombreux : la connectivité, les coûts et la nécessité d'un cadre éthique solide. Mais les possibilités sont importantes, notamment pour les zones rurales et les apprenants éloignés des centres urbains.",
     "Nous croyons que l'IA, utilisée de manière responsable, peut être un puissant levier d'inclusion et de développement des compétences sur le continent."
   ] },
-  { num: '02', category: 'Technologie', date: '03 Oct 2025', readTime: '7 min', title: 'Pourquoi le data literacy est devenu essentiel', author: 'Équipe IBMS', excerpt: "La capacité à comprendre et utiliser les données est désormais une compétence fondamentale.", image: 'https://images.pexels.com/photos/577195/pexels-photo-577195.jpeg?auto=compress&cs=tinysrgb&w=640', content: [
-    "La data literacy — la capacité à lire, comprendre et utiliser les données — est devenue une compétence transversale aussi essentielle que la lecture ou l'écriture.",
-    "Dans un monde où chaque interaction génère de la donnée, les organisations qui savent l'exploiter prennent de meilleures décisions, plus rapidement. Les individus qui maîtrisent les bases de la donnée sont mieux armés pour évoluer professionnellement.",
-    "IBMS intègre des modules de data literacy dans plusieurs de ses formations, avec une approche pratique : manipulation de données réelles, visualisation, et premiers pas en analyse.",
-    "L'enjeu n'est pas de former tous les apprenants au data science avancé, mais de donner à chacun les clés pour interagir avec un monde piloté par la donnée."
+  { num: '02', category: 'Technologie', date: '3 oct. 2025', readTime: '7 min', title: 'Pourquoi la culture des données est devenue essentielle', author: 'Équipe IBMS', excerpt: "La capacité à comprendre et à utiliser les données est désormais une compétence fondamentale.", image: 'https://images.pexels.com/photos/577195/pexels-photo-577195.jpeg?auto=compress&cs=tinysrgb&w=640', content: [
+    "La culture des données — la capacité à lire, comprendre et utiliser les données — est devenue une compétence transversale aussi essentielle que la lecture ou l'écriture.",
+    "Dans un monde où chaque interaction génère des données, les organisations qui savent les exploiter prennent de meilleures décisions, plus rapidement. Les personnes qui maîtrisent les bases de l’analyse de données sont mieux armées pour évoluer professionnellement.",
+    "IBMS intègre des modules consacrés à la culture des données dans plusieurs de ses formations, avec une approche pratique : manipulation de données réelles, visualisation et premières analyses.",
+    "L'enjeu n'est pas de former tous les apprenants à la science des données avancée, mais de donner à chacun les clés pour évoluer dans un monde piloté par les données."
   ] },
-  { num: '03', category: 'Méthodologie', date: '26 Sep 2025', readTime: '4 min', title: 'Apprendre par projets : la méthode IBMS', author: 'Équipe IBMS', excerpt: "Notre approche pédagogique centrée sur la pratique et les projets concrets.", image: 'https://images.pexels.com/photos/1181370/pexels-photo-1181370.jpeg?auto=compress&cs=tinysrgb&w=640', content: [
+  { num: '03', category: 'Méthodologie', date: '26 sept. 2025', readTime: '4 min', title: 'Apprendre par projets : la méthode IBMS', author: 'Équipe IBMS', excerpt: "Notre approche pédagogique centrée sur la pratique et les projets concrets.", image: 'https://images.pexels.com/photos/1181370/pexels-photo-1181370.jpeg?auto=compress&cs=tinysrgb&w=640', content: [
     "La méthode IBMS repose sur un principe simple : on apprend mieux en faisant. Nos formations alternent théorie et pratique, avec un accent sur les projets concrets.",
     "Chaque parcours se termine par un projet final, évalué par un jury de professionnels. Ce projet permet de valider les compétences acquises et de constituer un portfolio tangible.",
     "Le mentorat individuel est un autre pilier de notre approche. Chaque apprenant bénéficie d'un suivi personnalisé pour surmonter les obstacles et progresser à son rythme.",
@@ -743,7 +744,7 @@ export const testimonials: Testimonial[] = [
   {
     name: 'Aminata Diop',
     role: 'Étudiante à l’UAM',
-    text: "Mon expérience avec IBMS me permet de découvrir davantage le monde du numérique et de développer mes compétences.",
+    text: "Mon expérience auprès d’IBMS m’a permis de mieux découvrir le secteur du numérique et de développer mes compétences.",
     image: '/assets/images/temoignages/aminata.jpg',
   },
   {
@@ -779,7 +780,7 @@ export const faqItems: FAQItem[] = [
   { question: "Quels sont les prérequis pour s'inscrire à une formation ?", answer: "Les prérequis varient selon la formation. Certaines sont accessibles aux débutants, d'autres nécessitent des bases techniques. Chaque page de formation détaille les prérequis." },
   { question: "Les formations sont-elles certifiantes ?", answer: "Oui, les formations IBMS délivrent une certification reconnue à l'issue du parcours, après validation des projets pratiques." },
   { question: "Quels sont les formats disponibles ?", answer: "IBMS propose trois formats : présentiel, hybride et en ligne. Le format dépend de la formation choisie." },
-  { question: "Comment se déroule l'inscription ?", answer: "L'inscription se fait via le formulaire en ligne sur la page de la formation concernée. Notre équipe revient vers vous sous 48h." },
+  { question: "Comment se déroule l'inscription ?", answer: "L'inscription se fait au moyen du formulaire en ligne sur la page de la formation concernée. Notre équipe vous répond sous 48 heures." },
   { question: "Proposez-vous un accompagnement après la formation ?", answer: "Oui, IBMS assure un suivi post-formation incluant le mentorat, le coaching et l'aide à l'insertion professionnelle." },
   { question: "IBMS travaille-t-il avec les entreprises ?", answer: "Oui, IBMS propose des programmes sur mesure pour les entreprises : formation des équipes, transformation digitale, conseil." },
 ];
@@ -790,20 +791,20 @@ export type LegalSection = {
 };
 
 export const legalMentions: LegalSection[] = [
-  { title: 'Éditeur du site', content: "Le site ibms.sn est édité par IBMS — Institut de Formation et d'Innovation. Nos lieux d’accueil sont situés à Thiès, Angle Serigne Fallou et à Dakar, Sacrée Coeur. Contact : startupibms@gmail.com / +221 77 396 27 07." },
-  { title: 'Directeur de la publication', content: "La directrice de la publication est Madame Awa Diallo, Directrice générale d'IBMS." },
+  { title: 'Éditeur du site', content: "Le site ibms.sn est édité par IBMS — Institut de formation et d'innovation. Nos lieux d’accueil se trouvent à Thiès (angle Serigne Fallou) et à Dakar (Sacré-Cœur). Contact : startupibms@gmail.com / +221 77 396 27 07." },
+  { title: 'Directrice de la publication', content: "La directrice de la publication est Madame Awa Diallo, directrice générale d'IBMS." },
   { title: 'Hébergement', content: "Le site est hébergé par Bolt.host. Les données sont stockées dans des centres de données sécurisés conformes aux normes en vigueur." },
-  { title: 'Propriété intellectuelle', content: "L'ensemble des contenus présents sur ce site (textes, images, logos, vidéos) est la propriété d'IBMS sauf mention contraire. Toute reproduction, représentation ou diffusion, totale ou partielle, est interdite sans autorisation écrite préalable." },
-  { title: 'Données personnelles', content: "Les données collectées via les formulaires de contact et d'inscription sont utilisées uniquement dans le cadre des services proposés par IBMS. Elles ne sont jamais cédées à des tiers. Conformément à la loi, vous disposez d'un droit d'accès, de rectification et de suppression de vos données." },
+  { title: 'Propriété intellectuelle', content: "L'ensemble des contenus présents sur ce site (textes, images, logos et vidéos) appartient à IBMS, sauf mention contraire. Toute reproduction, représentation ou diffusion, totale ou partielle, est interdite sans autorisation écrite préalable." },
+  { title: 'Données personnelles', content: "Les données recueillies au moyen des formulaires de contact et d'inscription sont utilisées uniquement dans le cadre des services proposés par IBMS. Elles ne sont jamais cédées à des tiers. Conformément à la loi, vous disposez d'un droit d'accès, de rectification et de suppression de vos données." },
   { title: 'Cookies', content: "Ce site utilise des cookies de mesure d'audience anonymisée. Vous pouvez à tout moment désactiver ces cookies dans les paramètres de votre navigateur." },
   { title: 'Responsabilité', content: "IBMS s'efforce de fournir des informations exactes et à jour sur ce site. Toutefois, IBMS ne saurait être tenue responsable des erreurs, omissions ou indisponibilités temporaires du site." },
 ];
 
 export const legalPrivacy: LegalSection[] = [
-  { title: 'Collecte des données', content: "IBMS collecte les données suivantes : nom, prénom, adresse email, numéro de téléphone, parcours professionnel (uniquement lors de l'inscription à une formation). Ces données sont collectées via les formulaires du site." },
-  { title: 'Utilisation des données', content: "Vos données sont utilisées pour : répondre à vos demandes d'information, gérer votre inscription aux formations, assurer le suivi pédagogique, vous informer des événements et actualités d'IBMS (si vous y avez consenti)." },
+  { title: 'Collecte des données', content: "IBMS collecte les données suivantes : nom, prénom, adresse e-mail, numéro de téléphone et parcours professionnel (uniquement lors de l'inscription à une formation). Ces données sont recueillies au moyen des formulaires du site." },
+  { title: 'Utilisation des données', content: "Vos données sont utilisées pour répondre à vos demandes d'information, gérer votre inscription aux formations, assurer le suivi pédagogique et vous informer des événements et actualités d'IBMS, si vous y avez consenti." },
   { title: 'Conservation', content: "Vos données sont conservées pendant la durée de votre formation, puis archivées pour une durée de 3 ans à des fins statistiques, après quoi elles sont définitivement supprimées." },
-  { title: 'Vos droits', content: "Conformément à la réglementation en vigueur, vous disposez d'un droit d'accès, de rectification, d'effacement, de limitation et de portabilité de vos données. Pour exercer ces droits, contactez-nous à : startupibms@gmail.com." },
+  { title: 'Vos droits', content: "Conformément à la réglementation en vigueur, vous disposez d'un droit d'accès, de rectification, d'effacement, de limitation et de portabilité de vos données. Pour exercer ces droits, écrivez-nous à startupibms@gmail.com." },
   { title: 'Sécurité', content: "IBMS met en œuvre des mesures techniques et organisationnelles appropriées pour protéger vos données contre l'accès non autorisé, la perte ou la divulgation." },
   { title: 'Partage', content: "IBMS ne vend, ne loue et ne partage jamais vos données personnelles avec des tiers à des fins commerciales. Vos données peuvent être partagées avec nos partenaires de formation uniquement avec votre consentement explicite." },
 ];

@@ -65,7 +65,7 @@ export function ContactPage() {
   return (
     <PageLayout
       num="12"
-      label="Guide"
+      label="Contact"
       title={
         <>
           Parlons <span className="text-blue-700">de votre projet.</span>
@@ -84,7 +84,7 @@ export function ContactPage() {
             <div className="mb-10 text-center lg:text-left">
               <div className="mb-5 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-blue-700 to-blue-500 px-6 py-3 text-white shadow-lg shadow-blue-200">
                 <FileText className="h-5 w-5" />
-                <span className="font-semibold">Guide IBMS</span>
+                <span className="font-semibold">Contactez IBMS</span>
               </div>
 
               <h2 className="text-3xl font-extrabold tracking-tight text-blue-950 md:text-5xl">
@@ -128,13 +128,13 @@ export function ContactPage() {
                       </div>
                     </div>
 
-                    {/* Email */}
+                    {/* Adresse e-mail */}
                     <div className="flex items-center gap-4">
                       <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-blue-50">
                         <Mail className="h-7 w-7 text-blue-700" />
                       </div>
                       <div className="min-w-0">
-                        <p className="text-sm text-blue-700">Email</p>
+                        <p className="text-sm text-blue-700">Adresse e-mail</p>
                         <a
                           href="mailto:startupibms@gmail.com"
                           className="break-all text-base font-bold text-blue-950 hover:text-blue-600"
@@ -154,7 +154,7 @@ export function ContactPage() {
                         <p className="font-bold leading-relaxed text-blue-950">
                           Thiès, Angle Serigne Fallou
                           <br />
-                          Dakar, Sacrée Coeur
+                          Dakar, Sacré-Cœur
                         </p>
                       </div>
                     </div>
@@ -213,7 +213,7 @@ export function ContactPage() {
                     onSubmit={handleSubmit}
                     className="space-y-5"
                   >
-                    {/* Nom et Email */}
+                    {/* Nom et adresse e-mail */}
                     <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
                       <div>
                         <label className="mb-2 block text-sm font-bold text-blue-950">

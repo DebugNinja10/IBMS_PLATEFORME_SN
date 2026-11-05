@@ -37,7 +37,7 @@ export function EvenementDetailPage() {
               <Reveal delay={200}>
                 <div className="mt-8">
                   <Link to="/contact" className="btn-primary">
-                    S'inscrire à l'événement
+                    Nous contacter à propos de cet événement
                     <ArrowRight className="h-4 w-4" />
                   </Link>
                 </div>

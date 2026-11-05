@@ -61,7 +61,7 @@ export function Footer() {
 
             {/* Newsletter */}
             <div className="mt-8">
-              <div className="label text-white/40 mb-3">Notre newsletter</div>
+              <div className="label text-white/40 mb-3">Notre lettre d’information</div>
               <form
                 className="flex items-center gap-2 bg-white/5 border border-white/10 rounded-xl p-1.5"
                 onSubmit={(e) => e.preventDefault()}
@@ -70,14 +70,14 @@ export function Footer() {
                   type="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  placeholder="Votre email"
+                  placeholder="Votre adresse e-mail"
                   className="flex-1 bg-transparent px-3 py-2 text-sm text-white placeholder:text-white/30 focus:outline-none"
-                  aria-label="Email"
+                  aria-label="Adresse e-mail"
                 />
                 <button
                   type="submit"
                   className="group bg-ibms-blue hover:bg-ibms-blueLight rounded-lg px-4 py-2 transition-colors duration-300"
-                  aria-label="S'inscrire"
+                  aria-label="S’inscrire à la lettre d’information"
                 >
                   <ArrowRight className="h-4 w-4 text-white transition-transform duration-300 group-hover:translate-x-0.5" strokeWidth={2} />
                 </button>
@@ -127,7 +127,7 @@ export function Footer() {
                 <span>
                   Thiès, Angle Serigne Fallou
                   <br />
-                  Dakar, Sacrée Coeur
+                  Dakar, Sacré-Cœur
                 </span>
               </li>
             </ul>
