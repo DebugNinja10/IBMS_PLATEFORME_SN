@@ -62,21 +62,30 @@ function MapController({
   const map = useMap();
 
   useEffect(() => {
-    if (userPosition) {
-      map.flyTo(userPosition, 14, { duration: 0.8 });
-    } else if (activeOffice) {
+    if (activeOffice) {
       map.flyTo(activeOffice.position, 14, { duration: 0.8 });
+    } else if (userPosition) {
+      map.flyTo(userPosition, 14, { duration: 0.8 });
     }
   }, [activeOffice, map, userPosition]);
 
   return null;
 }
 
-function GoogleMapsDirections({ office }: { office: Office }) {
+function GoogleMapsDirections({
+  office,
+  origin,
+}: {
+  office: Office;
+  origin: [number, number] | null;
+}) {
   const directionsUrl = new URL('https://www.google.com/maps/dir/');
   directionsUrl.searchParams.set('api', '1');
   directionsUrl.searchParams.set('destination', office.address);
   directionsUrl.searchParams.set('travelmode', 'driving');
+  if (origin) {
+    directionsUrl.searchParams.set('origin', `${origin[0]},${origin[1]}`);
+  }
 
   return (
     <a
@@ -112,7 +121,9 @@ export function LocationsMap() {
       ({ coords }) => {
         setUserPosition([coords.latitude, coords.longitude]);
         setActiveOffice(null);
-        setLocationMessage('Votre position est affichée sur la carte.');
+        setLocationMessage(
+          'Votre position est affichée sur la carte et sera utilisée comme départ des itinéraires.'
+        );
         setIsLocating(false);
       },
       (error) => {
@@ -185,7 +196,10 @@ export function LocationsMap() {
                         {office.address}
                       </p>
                       <div className="mt-3">
-                        <GoogleMapsDirections office={office} />
+                        <GoogleMapsDirections
+                          office={office}
+                          origin={userPosition}
+                        />
                       </div>
                     </div>
                   </Popup>
@@ -222,7 +236,6 @@ export function LocationsMap() {
                   type="button"
                   onClick={() => {
                     setActiveOffice(office);
-                    setUserPosition(null);
                   }}
                   aria-pressed={activeOffice?.id === office.id}
                   className="flex w-full items-start gap-4 text-left"
@@ -249,7 +262,10 @@ export function LocationsMap() {
                   </span>
                 </button>
                 <div className="ml-[60px] mt-4">
-                  <GoogleMapsDirections office={office} />
+                  <GoogleMapsDirections
+                    office={office}
+                    origin={userPosition}
+                  />
                 </div>
               </article>
             ))}
