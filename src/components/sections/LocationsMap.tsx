@@ -27,7 +27,7 @@ const offices: Office[] = [
     name: 'Agence de Thiès',
     city: 'Thiès',
     address: 'Angle Serigne Fallou, Thiès, Sénégal',
-    position: [14.791461, -16.925605],
+    position: [14.7856494, -16.9248617],
     markerClass: 'ibms-marker--thies',
   },
   {
