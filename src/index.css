@@ -121,3 +121,46 @@
     @apply bg-white border border-ibms-veil rounded-2xl shadow-xl shadow-ibms-ink/5 p-6;
   }
 }
+
+.ibms-locations-map {
+  z-index: 0;
+  width: 100%;
+  height: min(58vh, 500px);
+  min-height: 360px;
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+}
+
+.ibms-office-marker {
+  border: 0;
+  background: transparent;
+}
+
+.ibms-office-marker span {
+  position: relative;
+  display: block;
+  width: 28px;
+  height: 28px;
+  border: 3px solid #fff;
+  border-radius: 50% 50% 50% 0;
+  box-shadow: 0 3px 12px rgb(15 23 42 / 30%);
+  transform: rotate(-45deg);
+}
+
+.ibms-office-marker span::after {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #fff;
+  content: '';
+}
+
+.ibms-marker--thies span {
+  background: #0a4d9c;
+}
+
+.ibms-marker--dakar span {
+  background: #06b6d4;
+}

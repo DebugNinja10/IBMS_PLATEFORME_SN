@@ -1,5 +1,5 @@
 
-import { useRef, useState } from 'react';
+import { lazy, Suspense, useRef, useState } from 'react';
 import type { FormEvent } from 'react';
 import emailjs from '@emailjs/browser';
 import { PageLayout } from '@/components/layout/PageLayout';
@@ -17,6 +17,12 @@ import {
   Handshake,
   Info,
 } from 'lucide-react';
+
+const LocationsMap = lazy(() =>
+  import('@/components/sections/LocationsMap').then((module) => ({
+    default: module.LocationsMap,
+  }))
+);
 
 export function ContactPage() {
   const formRef = useRef<HTMLFormElement>(null);
@@ -356,6 +362,18 @@ export function ContactPage() {
           </div>
         </div>
       </section>
+      <Suspense
+        fallback={
+          <div
+            role="status"
+            className="container-ibms flex min-h-[360px] items-center justify-center py-16 text-sm font-semibold text-blue-700"
+          >
+            Chargement de la carte…
+          </div>
+        }
+      >
+        <LocationsMap />
+      </Suspense>
     </PageLayout>
   );
 }
